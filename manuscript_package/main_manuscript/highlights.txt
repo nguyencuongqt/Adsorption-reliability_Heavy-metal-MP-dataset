@@ -1,0 +1,5 @@
+- Random row-level validation overstated predictive performance relative to grouped experiment-level and study-level validation.
+- The neural baseline was strongest in-domain, whereas LightGBM was strongest for experiment-level transfer.
+- Study-level transfer remained weak for all tested models despite the stronger legacy training pipeline.
+- Feature-importance rankings changed materially across coefficient, permutation, gain, and SHAP methods.
+- Synthetic null features exposed substantial method differences in null suppression and stability without implying causality.

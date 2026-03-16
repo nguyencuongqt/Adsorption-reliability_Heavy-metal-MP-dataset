@@ -1,0 +1,29 @@
+{
+  "dataset_path": "data/inputs/05_modeling_dataset_final.csv",
+  "feature_inventory_path": "data/inputs/ml_feature_inventory.csv",
+  "author_registry_path": "data/inputs/author_year_registry.csv",
+  "target_column": "qe",
+  "id_columns": ["aut_id", "exp_id"],
+  "drop_columns": ["fold_aut_id", "fold_exp_id"],
+  "random_state": 42,
+  "random_cv": {
+    "n_splits": 5,
+    "n_repeats": 3
+  },
+  "group_cv": {
+    "n_splits": 5
+  },
+  "include_optional_regime": true,
+  "optional_regime": "leave_one_study_out",
+  "rq1_models": ["elastic_net", "lightgbm", "mlp_regressor"],
+  "rq2_models": ["elastic_net", "lightgbm"],
+  "mechanism_groups": [
+    "solution_chemistry",
+    "surface_area_porosity",
+    "metal_identity",
+    "surface_functionality",
+    "polymer_identity",
+    "aging_state"
+  ],
+  "null_feature_seed": 31415
+}

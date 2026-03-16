@@ -1,0 +1,26 @@
+{
+  "study": "adsorption_reliability_study",
+  "question": "RQ2",
+  "dataset_path": "G:\\My Drive\\Multi_metal MP prediction\\adsorption_reliability_study\\data\\inputs\\05_modeling_dataset_final.csv",
+  "dataset_sha256": "47aca586e611d205f845392dbced6685f713bc9dd36bb3e26b6d098b419ed2ed",
+  "n_rows": 1009,
+  "n_real_features": 25,
+  "n_null_features": 7,
+  "models": [
+    "elastic_net",
+    "lightgbm"
+  ],
+  "methods": [
+    "elastic_net_coef",
+    "elastic_net_permutation",
+    "lightgbm_builtin_gain",
+    "lightgbm_permutation",
+    "lightgbm_shap"
+  ],
+  "regimes": [
+    "group_aut",
+    "group_exp",
+    "leave_one_study_out",
+    "random_cv"
+  ]
+}
