@@ -47,3 +47,34 @@ Feature importance is method-sensitive and model-sensitive. Importance can indic
 - `results/figures/`: manuscript-support figures
 - `results/logs/`: run manifests and hashes
 - `docs/`: project notes and discussion notes
+
+## Git Workflow
+
+Basic daily workflow in this repository:
+
+```powershell
+git pull
+git status
+git add .
+git commit -m "Short description of the change"
+git push
+```
+
+Create a new branch for a focused change:
+
+```powershell
+git checkout -b feature/short-name
+```
+
+Switch back to the main branch:
+
+```powershell
+git checkout master
+git pull
+```
+
+Useful checks:
+
+- `git status`: see changed files
+- `git log --oneline -5`: see recent commits
+- `git remote -v`: confirm the connected GitHub repository
