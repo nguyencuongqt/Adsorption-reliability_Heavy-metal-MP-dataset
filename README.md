@@ -51,6 +51,19 @@ pip install -r requirements.txt
 
 This project also reuses legacy code from `ml_benchmark`, which is not bundled inside this repository. Before running the study scripts, make sure the legacy `ml_benchmark` source is available in your broader workspace and importable from Python.
 
+Windows quick setup:
+
+```powershell
+.\setup.ps1
+```
+
+Conda alternative:
+
+```powershell
+conda env create -f environment.yml
+conda activate adsorption-reliability-study
+```
+
 ## Output Layout
 
 - `results/tables/`: machine-readable result tables

@@ -1,0 +1,14 @@
+name: adsorption-reliability-study
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - shap
+  - python-docx
+  - pillow
+  - pip
+
