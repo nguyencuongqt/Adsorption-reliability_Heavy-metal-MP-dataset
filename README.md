@@ -37,9 +37,19 @@ Feature importance is method-sensitive and model-sensitive. Importance can indic
 
 ## Reproducible Runs
 
-- `python adsorption_reliability_study/scripts/01_run_rq1.py`
-- `python adsorption_reliability_study/scripts/02_run_rq2.py`
-- `python adsorption_reliability_study/scripts/03_run_full_study.py`
+- `python scripts/01_run_rq1.py`
+- `python scripts/02_run_rq2.py`
+- `python scripts/03_run_full_study.py`
+
+## Environment Setup
+
+Install public Python dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+This project also reuses legacy code from `ml_benchmark`, which is not bundled inside this repository. Before running the study scripts, make sure the legacy `ml_benchmark` source is available in your broader workspace and importable from Python.
 
 ## Output Layout
 
