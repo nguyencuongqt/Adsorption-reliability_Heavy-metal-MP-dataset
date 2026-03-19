@@ -1,0 +1,29 @@
+Variable,Description,Unit,Missing %
+aut_id,Study identifier for the source publication,ID,0.0
+exp_id,Experiment identifier nested within study,ID,0.0
+qe,Equilibrium adsorption capacity of metal on microplastic,mg g^-1,0.0
+ph,Solution pH,unitless,53.3
+temp,Experimental temperature,deg C,10.3
+ce,Equilibrium dissolved metal concentration,mg L^-1,0.0
+rpm,Agitation or mixing speed,rpm,5.4
+sa,Specific surface area of the microplastic,m^2 g^-1,38.0
+fg_complexing,Indicator for complexing surface functional groups,0/1,0.0
+fg_polar,Indicator for polar surface functional groups,0/1,0.0
+fg_any,Indicator for any annotated surface functional group,0/1,0.0
+ags_aged,Indicator for aged microplastic,0/1,0.0
+ags_virgin,Indicator for virgin microplastic,0/1,0.0
+ph_missing,Indicator that solution pH was not reported,0/1,0.0
+temp_missing,Indicator that temperature was not reported,0/1,0.0
+rpm_missing,Indicator that mixing speed was not reported,0/1,0.0
+sa_missing,Indicator that specific surface area was not reported,0/1,0.0
+metal_cd,Indicator for Cd(II),0/1,0.0
+metal_cr,Indicator for Cr(VI),0/1,0.0
+metal_hg,Indicator for Hg(II),0/1,0.0
+ret_other,Indicator for polymer types outside the named categories,0/1,0.0
+ret_pa,Indicator for polyamide (PA),0/1,0.0
+ret_pe,Indicator for polyethylene (PE),0/1,0.0
+ret_pet,Indicator for polyethylene terephthalate (PET),0/1,0.0
+ret_pla,Indicator for polylactic acid (PLA),0/1,0.0
+ret_pp,Indicator for polypropylene (PP),0/1,0.0
+ret_ps,Indicator for polystyrene (PS),0/1,0.0
+ret_pvc,Indicator for polyvinyl chloride (PVC),0/1,0.0

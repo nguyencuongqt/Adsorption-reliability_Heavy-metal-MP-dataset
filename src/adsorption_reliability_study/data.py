@@ -1,20 +1,12 @@
 from __future__ import annotations
 
 import hashlib
-import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 from .config import StudyConfig
-
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-LEGACY_SRC = PROJECT_ROOT / "src"
-if str(LEGACY_SRC) not in sys.path:
-    sys.path.insert(0, str(LEGACY_SRC))
-
-from ml_benchmark import data as legacy_data  # noqa: E402
 
 
 def load_dataset(config: StudyConfig) -> pd.DataFrame:
@@ -32,6 +24,15 @@ def get_real_feature_columns(df: pd.DataFrame, config: StudyConfig) -> list[str]
 
 
 def build_model_features(df: pd.DataFrame, null_features_df: pd.DataFrame | None = None) -> pd.DataFrame:
+    import sys
+
+    project_root = Path(__file__).resolve().parents[3]
+    legacy_src = project_root / "src"
+    if str(legacy_src) not in sys.path:
+        sys.path.insert(0, str(legacy_src))
+
+    from ml_benchmark import data as legacy_data
+
     features = legacy_data.engineer_features(df).copy()
     if null_features_df is not None and not null_features_df.empty:
         for column in null_features_df.columns:
@@ -112,28 +113,49 @@ def dataset_hash(path: Path) -> str:
 def build_dataset_structure_table(df: pd.DataFrame, real_features: list[str]) -> pd.DataFrame:
     rows_per_study = df.groupby("aut_id").size()
     rows_per_experiment = df.groupby("exp_id").size()
-    metal_counts = {
-        "rows_metal_cd": int(df.get("metal_cd", pd.Series(dtype=float)).fillna(0).sum()),
-        "rows_metal_cr": int(df.get("metal_cr", pd.Series(dtype=float)).fillna(0).sum()),
-        "rows_metal_hg": int(df.get("metal_hg", pd.Series(dtype=float)).fillna(0).sum()),
-    }
+    total_rows = int(len(df))
+
+    def count_pct(column: str) -> str:
+        count = int(df.get(column, pd.Series(dtype=float)).fillna(0).sum())
+        return f"{count} ({count / total_rows * 100:.1f}%)"
+
+    def pct_missing(column: str) -> str:
+        return f"{df[column].isna().mean() * 100:.1f}%"
+
     records = [
-        {"metric": "n_rows", "value": int(len(df))},
-        {"metric": "n_real_features", "value": int(len(real_features))},
-        {"metric": "n_studies", "value": int(df["aut_id"].nunique())},
-        {"metric": "n_experiments", "value": int(df["exp_id"].nunique())},
-        {"metric": "median_rows_per_study", "value": float(rows_per_study.median())},
-        {"metric": "max_rows_per_study", "value": int(rows_per_study.max())},
-        {"metric": "median_rows_per_experiment", "value": float(rows_per_experiment.median())},
-        {"metric": "max_rows_per_experiment", "value": int(rows_per_experiment.max())},
-        {"metric": "median_qe", "value": float(df["qe"].median())},
-        {"metric": "p95_qe", "value": float(df["qe"].quantile(0.95))},
-        {"metric": "max_qe", "value": float(df["qe"].max())},
-        {"metric": "missing_fraction_ph", "value": float(df["ph"].isna().mean())},
-        {"metric": "missing_fraction_sa", "value": float(df["sa"].isna().mean())},
+        {"Domain": "Dataset scope", "Statistic": "Observations", "Value": f"{total_rows}", "Unit/Note": "rows"},
+        {"Domain": "Dataset scope", "Statistic": "Real predictors", "Value": f"{int(len(real_features))}", "Unit/Note": "variables"},
+        {"Domain": "Dataset scope", "Statistic": "Studies", "Value": f"{int(df['aut_id'].nunique())}", "Unit/Note": "aut_id"},
+        {"Domain": "Dataset scope", "Statistic": "Experiments", "Value": f"{int(df['exp_id'].nunique())}", "Unit/Note": "exp_id"},
+        {"Domain": "Grouped structure", "Statistic": "Median rows per study", "Value": f"{rows_per_study.median():.0f}", "Unit/Note": "rows"},
+        {"Domain": "Grouped structure", "Statistic": "Maximum rows per study", "Value": f"{int(rows_per_study.max())}", "Unit/Note": "rows"},
+        {"Domain": "Grouped structure", "Statistic": "Median rows per experiment", "Value": f"{rows_per_experiment.median():.0f}", "Unit/Note": "rows"},
+        {"Domain": "Grouped structure", "Statistic": "Maximum rows per experiment", "Value": f"{int(rows_per_experiment.max())}", "Unit/Note": "rows"},
+        {"Domain": "Target distribution", "Statistic": "Median qe", "Value": f"{df['qe'].median():.3f}", "Unit/Note": "mg g^-1"},
+        {
+            "Domain": "Target distribution",
+            "Statistic": "IQR qe",
+            "Value": f"{df['qe'].quantile(0.25):.3f}-{df['qe'].quantile(0.75):.3f}",
+            "Unit/Note": "mg g^-1",
+        },
+        {"Domain": "Target distribution", "Statistic": "95th percentile qe", "Value": f"{df['qe'].quantile(0.95):.3f}", "Unit/Note": "mg g^-1"},
+        {"Domain": "Target distribution", "Statistic": "Maximum qe", "Value": f"{df['qe'].max():.3f}", "Unit/Note": "mg g^-1"},
+        {"Domain": "Reporting completeness", "Statistic": "Missing pH", "Value": pct_missing("ph"), "Unit/Note": "of rows"},
+        {"Domain": "Reporting completeness", "Statistic": "Missing surface area", "Value": pct_missing("sa"), "Unit/Note": "of rows"},
+        {"Domain": "Reporting completeness", "Statistic": "Missing temperature", "Value": pct_missing("temp"), "Unit/Note": "of rows"},
+        {"Domain": "Reporting completeness", "Statistic": "Missing agitation speed", "Value": pct_missing("rpm"), "Unit/Note": "of rows"},
+        {"Domain": "Metal composition", "Statistic": "Cd(II)", "Value": count_pct("metal_cd"), "Unit/Note": "rows (%)"},
+        {"Domain": "Metal composition", "Statistic": "Cr(VI)", "Value": count_pct("metal_cr"), "Unit/Note": "rows (%)"},
+        {"Domain": "Metal composition", "Statistic": "Hg(II)", "Value": count_pct("metal_hg"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PE", "Value": count_pct("ret_pe"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PP", "Value": count_pct("ret_pp"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PS", "Value": count_pct("ret_ps"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PVC", "Value": count_pct("ret_pvc"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PET", "Value": count_pct("ret_pet"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PA", "Value": count_pct("ret_pa"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "PLA", "Value": count_pct("ret_pla"), "Unit/Note": "rows (%)"},
+        {"Domain": "Polymer composition", "Statistic": "Other", "Value": count_pct("ret_other"), "Unit/Note": "rows (%)"},
     ]
-    for metric, value in metal_counts.items():
-        records.append({"metric": metric, "value": value})
     return pd.DataFrame(records)
 
 

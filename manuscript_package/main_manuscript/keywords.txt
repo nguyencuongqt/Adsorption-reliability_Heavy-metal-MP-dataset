@@ -1,9 +1,6 @@
 grouped validation
-literature-derived data
 microplastics
-heavy metals
-adsorption
+heavy-metal adsorption
+literature-derived data
 feature importance
-SHAP
 null features
-interpretation reliability

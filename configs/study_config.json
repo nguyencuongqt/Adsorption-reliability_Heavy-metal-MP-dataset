@@ -13,8 +13,6 @@
   "group_cv": {
     "n_splits": 5
   },
-  "include_optional_regime": true,
-  "optional_regime": "leave_one_study_out",
   "rq1_models": ["elastic_net", "lightgbm", "mlp_regressor"],
   "rq2_models": ["elastic_net", "lightgbm"],
   "mechanism_groups": [

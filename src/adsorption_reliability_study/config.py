@@ -52,14 +52,6 @@ class StudyConfig:
         return dict(self.raw["group_cv"])
 
     @property
-    def include_optional_regime(self) -> bool:
-        return bool(self.raw.get("include_optional_regime", True))
-
-    @property
-    def optional_regime(self) -> str:
-        return str(self.raw.get("optional_regime", "leave_one_study_out"))
-
-    @property
     def rq1_models(self) -> list[str]:
         return list(self.raw["rq1_models"])
 

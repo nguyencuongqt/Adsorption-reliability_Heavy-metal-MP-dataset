@@ -1,0 +1,778 @@
+Importance method,Validation regime,feature,feature_type,null_type,mechanism_group,mean_importance,mean_importance_share
+EN coefficient,Grouped by study,num__ce_over_rpm,real,real,solution_chemistry,0.019,0.74
+EN coefficient,Grouped by study,num__temp,real,real,solution_chemistry,0.003,0.156
+EN coefficient,Grouped by study,num__ph,real,real,solution_chemistry,0.001,0.104
+EN coefficient,Grouped by study,num__ph_x_temp,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__aged_x_fg_any,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__aged_x_fg_complexing,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__ags_aged,real,real,aging_state,0.0,0.0
+EN coefficient,Grouped by study,num__ags_virgin,real,real,aging_state,0.0,0.0
+EN coefficient,Grouped by study,num__cd_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__cd_x_ph,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__cd_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__ce,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__ce_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__ce_log_x_rpm_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__ce_over_sa,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__cr_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__cr_x_ph,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__cr_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__fg_any,real,real,surface_functionality,0.0,0.0
+EN coefficient,Grouped by study,num__fg_complexing,real,real,surface_functionality,0.0,0.0
+EN coefficient,Grouped by study,num__fg_polar,real,real,surface_functionality,0.0,0.0
+EN coefficient,Grouped by study,num__hg_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__hg_x_ph,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__hg_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by study,num__metal_cd,real,real,metal_identity,0.0,0.0
+EN coefficient,Grouped by study,num__metal_cr,real,real,metal_identity,0.0,0.0
+EN coefficient,Grouped by study,num__metal_hg,real,real,metal_identity,0.0,0.0
+EN coefficient,Grouped by study,num__null_exp_random_effect,real,group_aware_random,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__null_perm_ce,real,permuted_real,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__null_perm_ph,real,permuted_real,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__null_random_binary,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__null_random_normal,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__null_random_uniform,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__null_study_random_effect,real,group_aware_random,null_feature,0.0,0.0
+EN coefficient,Grouped by study,num__ph_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__ph_x_ce_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__ret_other,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pa,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pe,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pe_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pet,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pla,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pp,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_ps,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__ret_pvc,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by study,num__rpm,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__rpm_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__rpm_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__sa,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Grouped by study,num__sa_log1p,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Grouped by study,num__sa_missing,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Grouped by study,num__temp_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__temp_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by study,num__temp_x_ce_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ce_over_rpm,real,real,solution_chemistry,0.019,0.881
+EN coefficient,Grouped by experiment,num__temp,real,real,solution_chemistry,0.003,0.103
+EN coefficient,Grouped by experiment,num__ph,real,real,solution_chemistry,0.0,0.016
+EN coefficient,Grouped by experiment,num__aged_x_fg_any,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__aged_x_fg_complexing,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__ags_aged,real,real,aging_state,0.0,0.0
+EN coefficient,Grouped by experiment,num__ags_virgin,real,real,aging_state,0.0,0.0
+EN coefficient,Grouped by experiment,num__cd_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__cd_x_ph,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__cd_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__ce,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ce_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ce_log_x_rpm_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ce_over_sa,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__cr_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__cr_x_ph,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__cr_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__fg_any,real,real,surface_functionality,0.0,0.0
+EN coefficient,Grouped by experiment,num__fg_complexing,real,real,surface_functionality,0.0,0.0
+EN coefficient,Grouped by experiment,num__fg_polar,real,real,surface_functionality,0.0,0.0
+EN coefficient,Grouped by experiment,num__hg_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__hg_x_ph,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__hg_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Grouped by experiment,num__metal_cd,real,real,metal_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__metal_cr,real,real,metal_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__metal_hg,real,real,metal_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_exp_random_effect,real,group_aware_random,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_perm_ce,real,permuted_real,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_perm_ph,real,permuted_real,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_random_binary,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_random_normal,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_random_uniform,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__null_study_random_effect,real,group_aware_random,null_feature,0.0,0.0
+EN coefficient,Grouped by experiment,num__ph_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ph_x_ce_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ph_x_temp,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_other,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pa,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pe,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pe_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pet,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pla,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pp,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_ps,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__ret_pvc,real,real,polymer_identity,0.0,0.0
+EN coefficient,Grouped by experiment,num__rpm,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__rpm_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__rpm_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__sa,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Grouped by experiment,num__sa_log1p,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Grouped by experiment,num__sa_missing,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Grouped by experiment,num__temp_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__temp_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Grouped by experiment,num__temp_x_ce_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ce_over_rpm,real,real,solution_chemistry,0.02,0.897
+EN coefficient,Random CV,num__temp,real,real,solution_chemistry,0.002,0.087
+EN coefficient,Random CV,num__ph,real,real,solution_chemistry,0.0,0.016
+EN coefficient,Random CV,num__aged_x_fg_any,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__aged_x_fg_complexing,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__ags_aged,real,real,aging_state,0.0,0.0
+EN coefficient,Random CV,num__ags_virgin,real,real,aging_state,0.0,0.0
+EN coefficient,Random CV,num__cd_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__cd_x_ph,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__cd_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__ce,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ce_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ce_log_x_rpm_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ce_over_sa,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__cr_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__cr_x_ph,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__cr_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__fg_any,real,real,surface_functionality,0.0,0.0
+EN coefficient,Random CV,num__fg_complexing,real,real,surface_functionality,0.0,0.0
+EN coefficient,Random CV,num__fg_polar,real,real,surface_functionality,0.0,0.0
+EN coefficient,Random CV,num__hg_x_ce_log,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__hg_x_ph,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__hg_x_sa_log,real,real,other,0.0,0.0
+EN coefficient,Random CV,num__metal_cd,real,real,metal_identity,0.0,0.0
+EN coefficient,Random CV,num__metal_cr,real,real,metal_identity,0.0,0.0
+EN coefficient,Random CV,num__metal_hg,real,real,metal_identity,0.0,0.0
+EN coefficient,Random CV,num__null_exp_random_effect,real,group_aware_random,null_feature,0.0,0.0
+EN coefficient,Random CV,num__null_perm_ce,real,permuted_real,null_feature,0.0,0.0
+EN coefficient,Random CV,num__null_perm_ph,real,permuted_real,null_feature,0.0,0.0
+EN coefficient,Random CV,num__null_random_binary,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Random CV,num__null_random_normal,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Random CV,num__null_random_uniform,real,random_noise,null_feature,0.0,0.0
+EN coefficient,Random CV,num__null_study_random_effect,real,group_aware_random,null_feature,0.0,0.0
+EN coefficient,Random CV,num__ph_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ph_x_ce_log,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ph_x_temp,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__ret_other,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pa,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pe,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pe_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pet,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pla,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pp,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_ps,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__ret_pvc,real,real,polymer_identity,0.0,0.0
+EN coefficient,Random CV,num__rpm,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__rpm_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__rpm_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__sa,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Random CV,num__sa_log1p,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Random CV,num__sa_missing,real,real,surface_area_porosity,0.0,0.0
+EN coefficient,Random CV,num__temp_log1p,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__temp_missing,real,real,solution_chemistry,0.0,0.0
+EN coefficient,Random CV,num__temp_x_ce_log,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by study,ph_x_temp,real,real,solution_chemistry,0.015,0.252
+EN permutation,Grouped by study,temp,real,real,solution_chemistry,0.001,0.184
+EN permutation,Grouped by study,temp_x_ce_log,real,real,solution_chemistry,0.002,0.126
+EN permutation,Grouped by study,ce,real,real,solution_chemistry,0.004,0.11
+EN permutation,Grouped by study,rpm,real,real,solution_chemistry,0.002,0.092
+EN permutation,Grouped by study,ce_log_x_rpm_log,real,real,solution_chemistry,0.0,0.046
+EN permutation,Grouped by study,ce_over_rpm,real,real,solution_chemistry,0.002,0.046
+EN permutation,Grouped by study,ph_x_ce_log,real,real,solution_chemistry,0.001,0.024
+EN permutation,Grouped by study,sa,real,real,surface_area_porosity,0.0,0.016
+EN permutation,Grouped by study,ce_over_sa,real,real,solution_chemistry,0.0,0.01
+EN permutation,Grouped by study,hg_x_ph,real,real,other,0.0,0.007
+EN permutation,Grouped by study,cd_x_sa_log,real,real,other,0.0,0.006
+EN permutation,Grouped by study,sa_log1p,real,real,surface_area_porosity,0.0,0.005
+EN permutation,Grouped by study,ce_log1p,real,real,solution_chemistry,0.0,0.005
+EN permutation,Grouped by study,cd_x_ph,real,real,other,0.0,0.003
+EN permutation,Grouped by study,ph,real,real,solution_chemistry,0.0,0.003
+EN permutation,Grouped by study,ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.002
+EN permutation,Grouped by study,cd_x_ce_log,real,real,other,0.0,0.002
+EN permutation,Grouped by study,temp_missing,real,real,solution_chemistry,0.0,0.002
+EN permutation,Grouped by study,rpm_log1p,real,real,solution_chemistry,0.0,0.001
+EN permutation,Grouped by study,aged_x_fg_complexing,real,real,other,0.0,0.001
+EN permutation,Grouped by study,aged_x_fg_any,real,real,other,0.0,0.001
+EN permutation,Grouped by study,ags_aged,real,real,aging_state,0.0,0.001
+EN permutation,Grouped by study,ags_virgin,real,real,aging_state,0.0,0.001
+EN permutation,Grouped by study,metal_hg,real,real,metal_identity,0.0,0.001
+EN permutation,Grouped by study,metal_cd,real,real,metal_identity,0.0,0.001
+EN permutation,Grouped by study,ret_other,real,real,polymer_identity,0.0,0.001
+EN permutation,Grouped by study,ret_pa,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,ret_pla,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,fg_complexing,real,real,surface_functionality,0.0,0.0
+EN permutation,Grouped by study,fg_polar,real,real,surface_functionality,0.0,0.0
+EN permutation,Grouped by study,fg_any,real,real,surface_functionality,0.0,0.0
+EN permutation,Grouped by study,ret_ps,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,metal_cr,real,real,metal_identity,0.0,0.0
+EN permutation,Grouped by study,sa_missing,real,real,surface_area_porosity,0.0,0.0
+EN permutation,Grouped by study,hg_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Grouped by study,cr_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Grouped by study,hg_x_ce_log,real,real,other,0.0,0.0
+EN permutation,Grouped by study,rpm_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by study,ret_pe_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,ret_pe,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,ret_pvc,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,temp_log1p,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by study,cr_x_ph,real,real,other,0.0,0.0
+EN permutation,Grouped by study,cr_x_ce_log,real,real,other,0.0,0.0
+EN permutation,Grouped by study,ph_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by study,ret_pp,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by study,ret_pet,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ce_over_rpm,real,real,solution_chemistry,0.05,0.773
+EN permutation,Grouped by experiment,temp,real,real,solution_chemistry,0.001,0.089
+EN permutation,Grouped by experiment,temp_x_ce_log,real,real,solution_chemistry,0.001,0.047
+EN permutation,Grouped by experiment,ce_log_x_rpm_log,real,real,solution_chemistry,0.0,0.024
+EN permutation,Grouped by experiment,ce,real,real,solution_chemistry,0.0,0.023
+EN permutation,Grouped by experiment,ph_x_temp,real,real,solution_chemistry,0.0,0.007
+EN permutation,Grouped by experiment,ph,real,real,solution_chemistry,0.0,0.006
+EN permutation,Grouped by experiment,rpm,real,real,solution_chemistry,0.0,0.005
+EN permutation,Grouped by experiment,sa,real,real,surface_area_porosity,0.0,0.003
+EN permutation,Grouped by experiment,ph_x_ce_log,real,real,solution_chemistry,0.0,0.003
+EN permutation,Grouped by experiment,ce_over_sa,real,real,solution_chemistry,0.0,0.003
+EN permutation,Grouped by experiment,sa_missing,real,real,surface_area_porosity,0.0,0.002
+EN permutation,Grouped by experiment,ce_log1p,real,real,solution_chemistry,0.0,0.001
+EN permutation,Grouped by experiment,cd_x_ce_log,real,real,other,0.0,0.001
+EN permutation,Grouped by experiment,metal_cd,real,real,metal_identity,0.0,0.001
+EN permutation,Grouped by experiment,temp_log1p,real,real,solution_chemistry,0.0,0.001
+EN permutation,Grouped by experiment,cd_x_sa_log,real,real,other,0.0,0.001
+EN permutation,Grouped by experiment,cd_x_ph,real,real,other,0.0,0.001
+EN permutation,Grouped by experiment,sa_log1p,real,real,surface_area_porosity,0.0,0.0
+EN permutation,Grouped by experiment,temp_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by experiment,hg_x_ph,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,rpm_log1p,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by experiment,ret_pet,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_ps,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_pa,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,hg_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,cr_x_ce_log,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,ret_pvc,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,cr_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,ph_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by experiment,cr_x_ph,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,ret_pla,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,rpm_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Grouped by experiment,hg_x_ce_log,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,metal_cr,real,real,metal_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_pe_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_pe,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_other,real,real,polymer_identity,0.0,0.0
+EN permutation,Grouped by experiment,aged_x_fg_any,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,ags_aged,real,real,aging_state,0.0,0.0
+EN permutation,Grouped by experiment,ags_virgin,real,real,aging_state,0.0,0.0
+EN permutation,Grouped by experiment,fg_polar,real,real,surface_functionality,0.0,0.0
+EN permutation,Grouped by experiment,aged_x_fg_complexing,real,real,other,0.0,0.0
+EN permutation,Grouped by experiment,fg_any,real,real,surface_functionality,0.0,0.0
+EN permutation,Grouped by experiment,fg_complexing,real,real,surface_functionality,0.0,0.0
+EN permutation,Grouped by experiment,metal_hg,real,real,metal_identity,0.0,0.0
+EN permutation,Grouped by experiment,ret_pp,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,ce_over_rpm,real,real,solution_chemistry,0.057,0.905
+EN permutation,Random CV,temp,real,real,solution_chemistry,0.002,0.034
+EN permutation,Random CV,temp_x_ce_log,real,real,solution_chemistry,0.001,0.019
+EN permutation,Random CV,ce,real,real,solution_chemistry,0.001,0.012
+EN permutation,Random CV,ph_x_temp,real,real,solution_chemistry,0.0,0.004
+EN permutation,Random CV,ph,real,real,solution_chemistry,0.0,0.004
+EN permutation,Random CV,ph_x_ce_log,real,real,solution_chemistry,0.0,0.003
+EN permutation,Random CV,ce_log_x_rpm_log,real,real,solution_chemistry,0.0,0.003
+EN permutation,Random CV,cd_x_ce_log,real,real,other,0.0,0.002
+EN permutation,Random CV,ce_over_sa,real,real,solution_chemistry,0.0,0.001
+EN permutation,Random CV,ce_log1p,real,real,solution_chemistry,0.0,0.001
+EN permutation,Random CV,rpm_log1p,real,real,solution_chemistry,0.0,0.001
+EN permutation,Random CV,sa,real,real,surface_area_porosity,0.0,0.001
+EN permutation,Random CV,cd_x_ph,real,real,other,0.0,0.001
+EN permutation,Random CV,rpm,real,real,solution_chemistry,0.0,0.0
+EN permutation,Random CV,sa_missing,real,real,surface_area_porosity,0.0,0.0
+EN permutation,Random CV,hg_x_ph,real,real,other,0.0,0.0
+EN permutation,Random CV,cd_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Random CV,cr_x_ce_log,real,real,other,0.0,0.0
+EN permutation,Random CV,sa_log1p,real,real,surface_area_porosity,0.0,0.0
+EN permutation,Random CV,metal_cd,real,real,metal_identity,0.0,0.0
+EN permutation,Random CV,ret_ps,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,ret_other,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,hg_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Random CV,cr_x_sa_log,real,real,other,0.0,0.0
+EN permutation,Random CV,temp_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Random CV,temp_log1p,real,real,solution_chemistry,0.0,0.0
+EN permutation,Random CV,metal_cr,real,real,metal_identity,0.0,0.0
+EN permutation,Random CV,ph_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Random CV,ret_pla,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,aged_x_fg_any,real,real,other,0.0,0.0
+EN permutation,Random CV,ags_aged,real,real,aging_state,0.0,0.0
+EN permutation,Random CV,ags_virgin,real,real,aging_state,0.0,0.0
+EN permutation,Random CV,ret_pet,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,aged_x_fg_complexing,real,real,other,0.0,0.0
+EN permutation,Random CV,hg_x_ce_log,real,real,other,0.0,0.0
+EN permutation,Random CV,ret_pa,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,rpm_missing,real,real,solution_chemistry,0.0,0.0
+EN permutation,Random CV,ret_pe,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,ret_pe_x_fg_any,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,ret_pvc,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,metal_hg,real,real,metal_identity,0.0,0.0
+EN permutation,Random CV,ret_pp,real,real,polymer_identity,0.0,0.0
+EN permutation,Random CV,cr_x_ph,real,real,other,0.0,0.0
+EN permutation,Random CV,fg_polar,real,real,surface_functionality,0.0,0.0
+EN permutation,Random CV,fg_any,real,real,surface_functionality,0.0,0.0
+EN permutation,Random CV,fg_complexing,real,real,surface_functionality,0.0,0.0
+LGBM gain,Grouped by study,num__null_exp_random_effect,real,group_aware_random,null_feature,1376.2,0.092
+LGBM gain,Grouped by study,num__ph_x_ce_log,real,real,solution_chemistry,1002.4,0.067
+LGBM gain,Grouped by study,num__null_random_normal,real,random_noise,null_feature,965.6,0.065
+LGBM gain,Grouped by study,num__null_perm_ce,real,permuted_real,null_feature,889.8,0.06
+LGBM gain,Grouped by study,num__null_random_uniform,real,random_noise,null_feature,794.0,0.053
+LGBM gain,Grouped by study,num__ce_over_sa,real,real,solution_chemistry,769.6,0.052
+LGBM gain,Grouped by study,num__null_perm_ph,real,permuted_real,null_feature,742.4,0.05
+LGBM gain,Grouped by study,num__ce_over_rpm,real,real,solution_chemistry,699.8,0.047
+LGBM gain,Grouped by study,num__sa,real,real,surface_area_porosity,684.4,0.046
+LGBM gain,Grouped by study,num__temp_x_ce_log,real,real,solution_chemistry,681.4,0.046
+LGBM gain,Grouped by study,num__ce,real,real,solution_chemistry,637.8,0.043
+LGBM gain,Grouped by study,num__hg_x_ce_log,real,real,other,567.2,0.038
+LGBM gain,Grouped by study,num__ce_log_x_rpm_log,real,real,solution_chemistry,475.6,0.032
+LGBM gain,Grouped by study,num__null_study_random_effect,real,group_aware_random,null_feature,467.4,0.031
+LGBM gain,Grouped by study,num__cr_x_sa_log,real,real,other,381.4,0.026
+LGBM gain,Grouped by study,num__cd_x_ce_log,real,real,other,374.8,0.025
+LGBM gain,Grouped by study,num__rpm,real,real,solution_chemistry,347.2,0.023
+LGBM gain,Grouped by study,num__sa_log1p,real,real,surface_area_porosity,326.2,0.022
+LGBM gain,Grouped by study,num__cd_x_sa_log,real,real,other,315.0,0.021
+LGBM gain,Grouped by study,num__cr_x_ce_log,real,real,other,314.2,0.021
+LGBM gain,Grouped by study,num__cd_x_ph,real,real,other,155.4,0.01
+LGBM gain,Grouped by study,num__ret_other,real,real,polymer_identity,154.4,0.01
+LGBM gain,Grouped by study,num__ags_aged,real,real,aging_state,145.6,0.01
+LGBM gain,Grouped by study,num__null_random_binary,real,random_noise,null_feature,137.0,0.009
+LGBM gain,Grouped by study,num__temp,real,real,solution_chemistry,132.0,0.009
+LGBM gain,Grouped by study,num__rpm_missing,real,real,solution_chemistry,130.6,0.009
+LGBM gain,Grouped by study,num__hg_x_ph,real,real,other,97.0,0.007
+LGBM gain,Grouped by study,num__ret_ps,real,real,polymer_identity,96.4,0.006
+LGBM gain,Grouped by study,num__ret_pa,real,real,polymer_identity,95.2,0.006
+LGBM gain,Grouped by study,num__ret_pla,real,real,polymer_identity,92.2,0.006
+LGBM gain,Grouped by study,num__ph,real,real,solution_chemistry,88.8,0.006
+LGBM gain,Grouped by study,num__ph_x_temp,real,real,solution_chemistry,79.4,0.005
+LGBM gain,Grouped by study,num__aged_x_fg_complexing,real,real,other,75.0,0.005
+LGBM gain,Grouped by study,num__ph_missing,real,real,solution_chemistry,73.0,0.005
+LGBM gain,Grouped by study,num__ret_pp,real,real,polymer_identity,70.6,0.005
+LGBM gain,Grouped by study,num__sa_missing,real,real,surface_area_porosity,64.2,0.004
+LGBM gain,Grouped by study,num__ce_log1p,real,real,solution_chemistry,57.2,0.004
+LGBM gain,Grouped by study,num__temp_missing,real,real,solution_chemistry,51.6,0.003
+LGBM gain,Grouped by study,num__rpm_log1p,real,real,solution_chemistry,48.6,0.003
+LGBM gain,Grouped by study,num__ret_pe_x_fg_any,real,real,polymer_identity,37.4,0.003
+LGBM gain,Grouped by study,num__ret_pe,real,real,polymer_identity,34.2,0.002
+LGBM gain,Grouped by study,num__metal_cd,real,real,metal_identity,29.4,0.002
+LGBM gain,Grouped by study,num__ret_ps_x_fg_any,real,real,polymer_identity,27.0,0.002
+LGBM gain,Grouped by study,num__temp_log1p,real,real,solution_chemistry,25.6,0.002
+LGBM gain,Grouped by study,num__metal_cr,real,real,metal_identity,18.0,0.001
+LGBM gain,Grouped by study,num__hg_x_sa_log,real,real,other,15.0,0.001
+LGBM gain,Grouped by study,num__ags_virgin,real,real,aging_state,12.0,0.001
+LGBM gain,Grouped by study,num__fg_polar,real,real,surface_functionality,11.6,0.001
+LGBM gain,Grouped by study,num__fg_complexing,real,real,surface_functionality,9.2,0.001
+LGBM gain,Grouped by study,num__ret_pet,real,real,polymer_identity,8.2,0.001
+LGBM gain,Grouped by study,num__ret_pvc,real,real,polymer_identity,8.0,0.001
+LGBM gain,Grouped by study,num__ret_pa_x_fg_any,real,real,polymer_identity,7.4,0.0
+LGBM gain,Grouped by study,num__metal_hg,real,real,metal_identity,6.0,0.0
+LGBM gain,Grouped by study,num__fg_any,real,real,surface_functionality,4.2,0.0
+LGBM gain,Grouped by study,num__aged_x_fg_any,real,real,other,1.6,0.0
+LGBM gain,Grouped by study,num__cr_x_ph,real,real,other,0.0,0.0
+LGBM gain,Grouped by experiment,num__null_exp_random_effect,real,group_aware_random,null_feature,1294.0,0.087
+LGBM gain,Grouped by experiment,num__null_random_normal,real,random_noise,null_feature,1033.2,0.069
+LGBM gain,Grouped by experiment,num__ph_x_ce_log,real,real,solution_chemistry,910.0,0.061
+LGBM gain,Grouped by experiment,num__null_perm_ce,real,permuted_real,null_feature,908.4,0.061
+LGBM gain,Grouped by experiment,num__null_random_uniform,real,random_noise,null_feature,872.2,0.058
+LGBM gain,Grouped by experiment,num__ce_over_sa,real,real,solution_chemistry,821.2,0.055
+LGBM gain,Grouped by experiment,num__null_perm_ph,real,permuted_real,null_feature,693.0,0.046
+LGBM gain,Grouped by experiment,num__temp_x_ce_log,real,real,solution_chemistry,682.0,0.046
+LGBM gain,Grouped by experiment,num__hg_x_ce_log,real,real,other,675.2,0.045
+LGBM gain,Grouped by experiment,num__ce_over_rpm,real,real,solution_chemistry,653.0,0.044
+LGBM gain,Grouped by experiment,num__sa,real,real,surface_area_porosity,648.0,0.043
+LGBM gain,Grouped by experiment,num__null_study_random_effect,real,group_aware_random,null_feature,559.4,0.037
+LGBM gain,Grouped by experiment,num__ce,real,real,solution_chemistry,531.0,0.036
+LGBM gain,Grouped by experiment,num__ce_log_x_rpm_log,real,real,solution_chemistry,514.2,0.034
+LGBM gain,Grouped by experiment,num__cd_x_sa_log,real,real,other,416.8,0.028
+LGBM gain,Grouped by experiment,num__rpm,real,real,solution_chemistry,343.6,0.023
+LGBM gain,Grouped by experiment,num__cr_x_sa_log,real,real,other,335.8,0.022
+LGBM gain,Grouped by experiment,num__cr_x_ce_log,real,real,other,317.8,0.021
+LGBM gain,Grouped by experiment,num__cd_x_ce_log,real,real,other,294.0,0.02
+LGBM gain,Grouped by experiment,num__sa_log1p,real,real,surface_area_porosity,283.2,0.019
+LGBM gain,Grouped by experiment,num__cd_x_ph,real,real,other,204.0,0.014
+LGBM gain,Grouped by experiment,num__hg_x_ph,real,real,other,147.2,0.01
+LGBM gain,Grouped by experiment,num__rpm_missing,real,real,solution_chemistry,143.4,0.01
+LGBM gain,Grouped by experiment,num__ret_other,real,real,polymer_identity,130.0,0.009
+LGBM gain,Grouped by experiment,num__ret_ps,real,real,polymer_identity,124.0,0.008
+LGBM gain,Grouped by experiment,num__temp,real,real,solution_chemistry,119.6,0.008
+LGBM gain,Grouped by experiment,num__null_random_binary,real,random_noise,null_feature,119.2,0.008
+LGBM gain,Grouped by experiment,num__aged_x_fg_complexing,real,real,other,117.4,0.008
+LGBM gain,Grouped by experiment,num__ret_pla,real,real,polymer_identity,98.8,0.007
+LGBM gain,Grouped by experiment,num__ret_pp,real,real,polymer_identity,93.6,0.006
+LGBM gain,Grouped by experiment,num__ags_aged,real,real,aging_state,87.4,0.006
+LGBM gain,Grouped by experiment,num__ph_x_temp,real,real,solution_chemistry,83.2,0.006
+LGBM gain,Grouped by experiment,num__ph,real,real,solution_chemistry,71.4,0.005
+LGBM gain,Grouped by experiment,num__ret_pa,real,real,polymer_identity,65.2,0.004
+LGBM gain,Grouped by experiment,num__sa_missing,real,real,surface_area_porosity,63.2,0.004
+LGBM gain,Grouped by experiment,num__rpm_log1p,real,real,solution_chemistry,53.8,0.004
+LGBM gain,Grouped by experiment,num__temp_missing,real,real,solution_chemistry,50.4,0.003
+LGBM gain,Grouped by experiment,num__ce_log1p,real,real,solution_chemistry,49.8,0.003
+LGBM gain,Grouped by experiment,num__ph_missing,real,real,solution_chemistry,47.2,0.003
+LGBM gain,Grouped by experiment,num__ret_pe,real,real,polymer_identity,37.8,0.003
+LGBM gain,Grouped by experiment,num__ret_ps_x_fg_any,real,real,polymer_identity,34.2,0.002
+LGBM gain,Grouped by experiment,num__ret_pe_x_fg_any,real,real,polymer_identity,28.2,0.002
+LGBM gain,Grouped by experiment,num__temp_log1p,real,real,solution_chemistry,26.8,0.002
+LGBM gain,Grouped by experiment,num__metal_cd,real,real,metal_identity,26.2,0.002
+LGBM gain,Grouped by experiment,num__hg_x_sa_log,real,real,other,20.2,0.001
+LGBM gain,Grouped by experiment,num__metal_hg,real,real,metal_identity,17.6,0.001
+LGBM gain,Grouped by experiment,num__metal_cr,real,real,metal_identity,16.6,0.001
+LGBM gain,Grouped by experiment,num__fg_complexing,real,real,surface_functionality,14.8,0.001
+LGBM gain,Grouped by experiment,num__fg_polar,real,real,surface_functionality,11.4,0.001
+LGBM gain,Grouped by experiment,num__ret_pet,real,real,polymer_identity,9.2,0.001
+LGBM gain,Grouped by experiment,num__ret_pa_x_fg_any,real,real,polymer_identity,8.8,0.001
+LGBM gain,Grouped by experiment,num__ret_pvc,real,real,polymer_identity,7.8,0.001
+LGBM gain,Grouped by experiment,num__fg_any,real,real,surface_functionality,7.4,0.0
+LGBM gain,Grouped by experiment,num__ags_virgin,real,real,aging_state,5.4,0.0
+LGBM gain,Grouped by experiment,num__aged_x_fg_any,real,real,other,0.2,0.0
+LGBM gain,Grouped by experiment,num__cr_x_ph,real,real,other,0.0,0.0
+LGBM gain,Random CV,num__null_exp_random_effect,real,group_aware_random,null_feature,1269.333,0.085
+LGBM gain,Random CV,num__null_random_normal,real,random_noise,null_feature,962.933,0.064
+LGBM gain,Random CV,num__null_perm_ce,real,permuted_real,null_feature,914.133,0.061
+LGBM gain,Random CV,num__ph_x_ce_log,real,real,solution_chemistry,885.533,0.059
+LGBM gain,Random CV,num__null_random_uniform,real,random_noise,null_feature,868.0,0.058
+LGBM gain,Random CV,num__temp_x_ce_log,real,real,solution_chemistry,779.2,0.052
+LGBM gain,Random CV,num__ce_over_sa,real,real,solution_chemistry,768.067,0.051
+LGBM gain,Random CV,num__null_perm_ph,real,permuted_real,null_feature,693.867,0.046
+LGBM gain,Random CV,num__hg_x_ce_log,real,real,other,669.8,0.045
+LGBM gain,Random CV,num__sa,real,real,surface_area_porosity,666.733,0.045
+LGBM gain,Random CV,num__ce_over_rpm,real,real,solution_chemistry,655.467,0.044
+LGBM gain,Random CV,num__ce,real,real,solution_chemistry,548.867,0.037
+LGBM gain,Random CV,num__null_study_random_effect,real,group_aware_random,null_feature,539.267,0.036
+LGBM gain,Random CV,num__ce_log_x_rpm_log,real,real,solution_chemistry,480.2,0.032
+LGBM gain,Random CV,num__cd_x_sa_log,real,real,other,387.0,0.026
+LGBM gain,Random CV,num__cr_x_sa_log,real,real,other,368.733,0.025
+LGBM gain,Random CV,num__rpm,real,real,solution_chemistry,324.4,0.022
+LGBM gain,Random CV,num__cr_x_ce_log,real,real,other,320.8,0.021
+LGBM gain,Random CV,num__cd_x_ce_log,real,real,other,314.2,0.021
+LGBM gain,Random CV,num__sa_log1p,real,real,surface_area_porosity,311.267,0.021
+LGBM gain,Random CV,num__cd_x_ph,real,real,other,210.133,0.014
+LGBM gain,Random CV,num__rpm_missing,real,real,solution_chemistry,163.067,0.011
+LGBM gain,Random CV,num__hg_x_ph,real,real,other,145.467,0.01
+LGBM gain,Random CV,num__ret_pla,real,real,polymer_identity,135.2,0.009
+LGBM gain,Random CV,num__ret_other,real,real,polymer_identity,124.667,0.008
+LGBM gain,Random CV,num__aged_x_fg_complexing,real,real,other,122.333,0.008
+LGBM gain,Random CV,num__null_random_binary,real,random_noise,null_feature,121.2,0.008
+LGBM gain,Random CV,num__temp,real,real,solution_chemistry,114.733,0.008
+LGBM gain,Random CV,num__ret_ps,real,real,polymer_identity,108.667,0.007
+LGBM gain,Random CV,num__ret_pp,real,real,polymer_identity,97.867,0.007
+LGBM gain,Random CV,num__ags_aged,real,real,aging_state,94.0,0.006
+LGBM gain,Random CV,num__ph_x_temp,real,real,solution_chemistry,73.933,0.005
+LGBM gain,Random CV,num__ph,real,real,solution_chemistry,71.933,0.005
+LGBM gain,Random CV,num__ret_pa,real,real,polymer_identity,69.933,0.005
+LGBM gain,Random CV,num__rpm_log1p,real,real,solution_chemistry,61.667,0.004
+LGBM gain,Random CV,num__sa_missing,real,real,surface_area_porosity,59.533,0.004
+LGBM gain,Random CV,num__ph_missing,real,real,solution_chemistry,56.6,0.004
+LGBM gain,Random CV,num__temp_missing,real,real,solution_chemistry,55.4,0.004
+LGBM gain,Random CV,num__ce_log1p,real,real,solution_chemistry,47.467,0.003
+LGBM gain,Random CV,num__temp_log1p,real,real,solution_chemistry,38.533,0.003
+LGBM gain,Random CV,num__ret_pe_x_fg_any,real,real,polymer_identity,35.133,0.002
+LGBM gain,Random CV,num__ret_pe,real,real,polymer_identity,29.867,0.002
+LGBM gain,Random CV,num__ret_ps_x_fg_any,real,real,polymer_identity,27.933,0.002
+LGBM gain,Random CV,num__metal_cd,real,real,metal_identity,26.267,0.002
+LGBM gain,Random CV,num__metal_cr,real,real,metal_identity,20.333,0.001
+LGBM gain,Random CV,num__hg_x_sa_log,real,real,other,17.333,0.001
+LGBM gain,Random CV,num__fg_polar,real,real,surface_functionality,13.333,0.001
+LGBM gain,Random CV,num__metal_hg,real,real,metal_identity,11.933,0.001
+LGBM gain,Random CV,num__fg_complexing,real,real,surface_functionality,11.6,0.001
+LGBM gain,Random CV,num__ret_pvc,real,real,polymer_identity,9.067,0.001
+LGBM gain,Random CV,num__fg_any,real,real,surface_functionality,8.733,0.001
+LGBM gain,Random CV,num__ags_virgin,real,real,aging_state,7.133,0.0
+LGBM gain,Random CV,num__ret_pet,real,real,polymer_identity,6.467,0.0
+LGBM gain,Random CV,num__ret_pa_x_fg_any,real,real,polymer_identity,6.267,0.0
+LGBM gain,Random CV,num__aged_x_fg_any,real,real,other,0.2,0.0
+LGBM gain,Random CV,num__cr_x_ph,real,real,other,0.0,0.0
+LGBM permutation,Grouped by study,temp_x_ce_log,real,real,solution_chemistry,0.042,0.107
+LGBM permutation,Grouped by study,ret_pe_x_fg_any,real,real,polymer_identity,0.01,0.101
+LGBM permutation,Grouped by study,hg_x_ce_log,real,real,other,0.034,0.091
+LGBM permutation,Grouped by study,ags_aged,real,real,aging_state,0.034,0.081
+LGBM permutation,Grouped by study,ret_other,real,real,polymer_identity,0.034,0.074
+LGBM permutation,Grouped by study,sa,real,real,surface_area_porosity,0.008,0.05
+LGBM permutation,Grouped by study,aged_x_fg_complexing,real,real,other,0.004,0.04
+LGBM permutation,Grouped by study,ce,real,real,solution_chemistry,0.01,0.037
+LGBM permutation,Grouped by study,ce_log_x_rpm_log,real,real,solution_chemistry,0.014,0.032
+LGBM permutation,Grouped by study,ce_over_sa,real,real,solution_chemistry,0.008,0.027
+LGBM permutation,Grouped by study,cr_x_ce_log,real,real,other,0.008,0.02
+LGBM permutation,Grouped by study,ret_pla,real,real,polymer_identity,0.007,0.02
+LGBM permutation,Grouped by study,sa_log1p,real,real,surface_area_porosity,0.001,0.014
+LGBM permutation,Grouped by study,ph_x_ce_log,real,real,solution_chemistry,0.006,0.014
+LGBM permutation,Grouped by study,ce_over_rpm,real,real,solution_chemistry,0.002,0.009
+LGBM permutation,Grouped by study,sa_missing,real,real,surface_area_porosity,0.003,0.007
+LGBM permutation,Grouped by study,ret_pa,real,real,polymer_identity,0.001,0.007
+LGBM permutation,Grouped by study,rpm_log1p,real,real,solution_chemistry,0.003,0.007
+LGBM permutation,Grouped by study,ret_ps,real,real,polymer_identity,0.002,0.004
+LGBM permutation,Grouped by study,ret_pp,real,real,polymer_identity,0.002,0.004
+LGBM permutation,Grouped by study,ce_log1p,real,real,solution_chemistry,0.001,0.004
+LGBM permutation,Grouped by study,temp,real,real,solution_chemistry,0.001,0.002
+LGBM permutation,Grouped by study,ph_x_temp,real,real,solution_chemistry,0.001,0.002
+LGBM permutation,Grouped by study,ags_virgin,real,real,aging_state,0.001,0.002
+LGBM permutation,Grouped by study,hg_x_ph,real,real,other,0.001,0.002
+LGBM permutation,Grouped by study,temp_missing,real,real,solution_chemistry,0.0,0.002
+LGBM permutation,Grouped by study,cd_x_ph,real,real,other,0.001,0.002
+LGBM permutation,Grouped by study,ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.002
+LGBM permutation,Grouped by study,ph_missing,real,real,solution_chemistry,0.0,0.002
+LGBM permutation,Grouped by study,metal_hg,real,real,metal_identity,0.001,0.001
+LGBM permutation,Grouped by study,ret_pe,real,real,polymer_identity,0.0,0.001
+LGBM permutation,Grouped by study,ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.001
+LGBM permutation,Grouped by study,temp_log1p,real,real,solution_chemistry,0.0,0.001
+LGBM permutation,Grouped by study,fg_complexing,real,real,surface_functionality,0.0,0.001
+LGBM permutation,Grouped by study,aged_x_fg_any,real,real,other,0.0,0.001
+LGBM permutation,Grouped by study,fg_polar,real,real,surface_functionality,0.0,0.001
+LGBM permutation,Grouped by study,hg_x_sa_log,real,real,other,0.0,0.001
+LGBM permutation,Grouped by study,rpm,real,real,solution_chemistry,0.0,0.0
+LGBM permutation,Grouped by study,ph,real,real,solution_chemistry,0.0,0.0
+LGBM permutation,Grouped by study,cr_x_sa_log,real,real,other,0.0,0.0
+LGBM permutation,Grouped by study,ret_pvc,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Grouped by study,cr_x_ph,real,real,other,0.0,0.0
+LGBM permutation,Grouped by study,cd_x_ce_log,real,real,other,0.0,0.0
+LGBM permutation,Grouped by study,cd_x_sa_log,real,real,other,0.0,0.0
+LGBM permutation,Grouped by study,fg_any,real,real,surface_functionality,0.0,0.0
+LGBM permutation,Grouped by study,metal_cd,real,real,metal_identity,0.0,0.0
+LGBM permutation,Grouped by study,metal_cr,real,real,metal_identity,0.0,0.0
+LGBM permutation,Grouped by study,ret_pet,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Grouped by study,rpm_missing,real,real,solution_chemistry,0.0,0.0
+LGBM permutation,Grouped by experiment,aged_x_fg_complexing,real,real,other,0.509,0.228
+LGBM permutation,Grouped by experiment,hg_x_ce_log,real,real,other,0.437,0.201
+LGBM permutation,Grouped by experiment,rpm_missing,real,real,solution_chemistry,0.291,0.127
+LGBM permutation,Grouped by experiment,temp_x_ce_log,real,real,solution_chemistry,0.12,0.044
+LGBM permutation,Grouped by experiment,rpm,real,real,solution_chemistry,0.114,0.043
+LGBM permutation,Grouped by experiment,ret_pp,real,real,polymer_identity,0.085,0.037
+LGBM permutation,Grouped by experiment,ce,real,real,solution_chemistry,0.091,0.033
+LGBM permutation,Grouped by experiment,cr_x_ce_log,real,real,other,0.065,0.028
+LGBM permutation,Grouped by experiment,sa,real,real,surface_area_porosity,0.066,0.026
+LGBM permutation,Grouped by experiment,sa_missing,real,real,surface_area_porosity,0.038,0.02
+LGBM permutation,Grouped by experiment,ce_log_x_rpm_log,real,real,solution_chemistry,0.044,0.019
+LGBM permutation,Grouped by experiment,ags_aged,real,real,aging_state,0.024,0.018
+LGBM permutation,Grouped by experiment,ret_other,real,real,polymer_identity,0.048,0.016
+LGBM permutation,Grouped by experiment,ce_over_sa,real,real,solution_chemistry,0.042,0.016
+LGBM permutation,Grouped by experiment,ph_x_ce_log,real,real,solution_chemistry,0.033,0.011
+LGBM permutation,Grouped by experiment,ret_pla,real,real,polymer_identity,0.022,0.011
+LGBM permutation,Grouped by experiment,ret_pe_x_fg_any,real,real,polymer_identity,0.021,0.006
+LGBM permutation,Grouped by experiment,cd_x_sa_log,real,real,other,0.015,0.006
+LGBM permutation,Grouped by experiment,cd_x_ph,real,real,other,0.011,0.004
+LGBM permutation,Grouped by experiment,rpm_log1p,real,real,solution_chemistry,0.013,0.004
+LGBM permutation,Grouped by experiment,ret_ps,real,real,polymer_identity,0.007,0.003
+LGBM permutation,Grouped by experiment,sa_log1p,real,real,surface_area_porosity,0.008,0.003
+LGBM permutation,Grouped by experiment,ph_x_temp,real,real,solution_chemistry,0.007,0.003
+LGBM permutation,Grouped by experiment,ret_pe,real,real,polymer_identity,0.008,0.003
+LGBM permutation,Grouped by experiment,ce_over_rpm,real,real,solution_chemistry,0.007,0.003
+LGBM permutation,Grouped by experiment,metal_cd,real,real,metal_identity,0.005,0.001
+LGBM permutation,Grouped by experiment,temp,real,real,solution_chemistry,0.004,0.001
+LGBM permutation,Grouped by experiment,cd_x_ce_log,real,real,other,0.004,0.001
+LGBM permutation,Grouped by experiment,ph_missing,real,real,solution_chemistry,0.004,0.001
+LGBM permutation,Grouped by experiment,ret_ps_x_fg_any,real,real,polymer_identity,0.003,0.001
+LGBM permutation,Grouped by experiment,ret_pa,real,real,polymer_identity,0.002,0.001
+LGBM permutation,Grouped by experiment,cr_x_sa_log,real,real,other,0.003,0.001
+LGBM permutation,Grouped by experiment,aged_x_fg_any,real,real,other,0.002,0.001
+LGBM permutation,Grouped by experiment,ags_virgin,real,real,aging_state,0.002,0.001
+LGBM permutation,Grouped by experiment,hg_x_ph,real,real,other,0.002,0.001
+LGBM permutation,Grouped by experiment,ce_log1p,real,real,solution_chemistry,0.002,0.001
+LGBM permutation,Grouped by experiment,metal_cr,real,real,metal_identity,0.002,0.001
+LGBM permutation,Grouped by experiment,fg_polar,real,real,surface_functionality,0.002,0.001
+LGBM permutation,Grouped by experiment,temp_log1p,real,real,solution_chemistry,0.001,0.0
+LGBM permutation,Grouped by experiment,fg_complexing,real,real,surface_functionality,0.001,0.0
+LGBM permutation,Grouped by experiment,temp_missing,real,real,solution_chemistry,0.0,0.0
+LGBM permutation,Grouped by experiment,ph,real,real,solution_chemistry,0.0,0.0
+LGBM permutation,Grouped by experiment,cr_x_ph,real,real,other,0.0,0.0
+LGBM permutation,Grouped by experiment,ret_pa_x_fg_any,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Grouped by experiment,hg_x_sa_log,real,real,other,0.0,0.0
+LGBM permutation,Grouped by experiment,ret_pet,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Grouped by experiment,ret_pvc,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Grouped by experiment,fg_any,real,real,surface_functionality,0.0,0.0
+LGBM permutation,Grouped by experiment,metal_hg,real,real,metal_identity,0.0,0.0
+LGBM permutation,Random CV,hg_x_ce_log,real,real,other,0.842,0.209
+LGBM permutation,Random CV,aged_x_fg_complexing,real,real,other,0.51,0.126
+LGBM permutation,Random CV,rpm_missing,real,real,solution_chemistry,0.505,0.124
+LGBM permutation,Random CV,temp_x_ce_log,real,real,solution_chemistry,0.248,0.062
+LGBM permutation,Random CV,ret_other,real,real,polymer_identity,0.221,0.058
+LGBM permutation,Random CV,ret_pp,real,real,polymer_identity,0.146,0.036
+LGBM permutation,Random CV,rpm,real,real,solution_chemistry,0.152,0.036
+LGBM permutation,Random CV,ret_pla,real,real,polymer_identity,0.143,0.036
+LGBM permutation,Random CV,cr_x_ce_log,real,real,other,0.117,0.03
+LGBM permutation,Random CV,ce,real,real,solution_chemistry,0.118,0.028
+LGBM permutation,Random CV,ags_aged,real,real,aging_state,0.106,0.026
+LGBM permutation,Random CV,sa,real,real,surface_area_porosity,0.097,0.023
+LGBM permutation,Random CV,ph_x_ce_log,real,real,solution_chemistry,0.079,0.019
+LGBM permutation,Random CV,ce_log_x_rpm_log,real,real,solution_chemistry,0.042,0.01
+LGBM permutation,Random CV,cd_x_sa_log,real,real,other,0.028,0.007
+LGBM permutation,Random CV,ret_pe_x_fg_any,real,real,polymer_identity,0.022,0.006
+LGBM permutation,Random CV,ce_over_sa,real,real,solution_chemistry,0.025,0.005
+LGBM permutation,Random CV,cd_x_ph,real,real,other,0.019,0.004
+LGBM permutation,Random CV,ret_pe,real,real,polymer_identity,0.017,0.004
+LGBM permutation,Random CV,sa_missing,real,real,surface_area_porosity,0.017,0.004
+LGBM permutation,Random CV,sa_log1p,real,real,surface_area_porosity,0.015,0.004
+LGBM permutation,Random CV,ce_over_rpm,real,real,solution_chemistry,0.015,0.004
+LGBM permutation,Random CV,cr_x_sa_log,real,real,other,0.011,0.003
+LGBM permutation,Random CV,cd_x_ce_log,real,real,other,0.012,0.003
+LGBM permutation,Random CV,ags_virgin,real,real,aging_state,0.011,0.003
+LGBM permutation,Random CV,rpm_log1p,real,real,solution_chemistry,0.008,0.002
+LGBM permutation,Random CV,ph_x_temp,real,real,solution_chemistry,0.008,0.002
+LGBM permutation,Random CV,temp,real,real,solution_chemistry,0.008,0.002
+LGBM permutation,Random CV,metal_cd,real,real,metal_identity,0.007,0.002
+LGBM permutation,Random CV,ret_pa,real,real,polymer_identity,0.006,0.002
+LGBM permutation,Random CV,ce_log1p,real,real,solution_chemistry,0.006,0.001
+LGBM permutation,Random CV,hg_x_ph,real,real,other,0.003,0.001
+LGBM permutation,Random CV,temp_log1p,real,real,solution_chemistry,0.003,0.001
+LGBM permutation,Random CV,fg_polar,real,real,surface_functionality,0.003,0.001
+LGBM permutation,Random CV,ph_missing,real,real,solution_chemistry,0.003,0.001
+LGBM permutation,Random CV,metal_cr,real,real,metal_identity,0.003,0.001
+LGBM permutation,Random CV,aged_x_fg_any,real,real,other,0.002,0.001
+LGBM permutation,Random CV,ret_ps,real,real,polymer_identity,0.003,0.001
+LGBM permutation,Random CV,temp_missing,real,real,solution_chemistry,0.002,0.0
+LGBM permutation,Random CV,fg_any,real,real,surface_functionality,0.001,0.0
+LGBM permutation,Random CV,metal_hg,real,real,metal_identity,0.001,0.0
+LGBM permutation,Random CV,hg_x_sa_log,real,real,other,0.001,0.0
+LGBM permutation,Random CV,ret_pvc,real,real,polymer_identity,0.001,0.0
+LGBM permutation,Random CV,ret_pa_x_fg_any,real,real,polymer_identity,0.001,0.0
+LGBM permutation,Random CV,ph,real,real,solution_chemistry,0.001,0.0
+LGBM permutation,Random CV,ret_ps_x_fg_any,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Random CV,fg_complexing,real,real,surface_functionality,0.0,0.0
+LGBM permutation,Random CV,ret_pet,real,real,polymer_identity,0.0,0.0
+LGBM permutation,Random CV,cr_x_ph,real,real,other,0.0,0.0
+LGBM SHAP,Grouped by study,cr_x_ce_log,real,real,other,0.085,0.089
+LGBM SHAP,Grouped by study,temp_x_ce_log,real,real,solution_chemistry,0.07,0.074
+LGBM SHAP,Grouped by study,ph_x_ce_log,real,real,solution_chemistry,0.048,0.062
+LGBM SHAP,Grouped by study,ags_aged,real,real,aging_state,0.044,0.047
+LGBM SHAP,Grouped by study,aged_x_fg_complexing,real,real,other,0.045,0.044
+LGBM SHAP,Grouped by study,ret_other,real,real,polymer_identity,0.028,0.042
+LGBM SHAP,Grouped by study,hg_x_ce_log,real,real,other,0.036,0.039
+LGBM SHAP,Grouped by study,rpm,real,real,solution_chemistry,0.03,0.031
+LGBM SHAP,Grouped by study,ce_log_x_rpm_log,real,real,solution_chemistry,0.025,0.028
+LGBM SHAP,Grouped by study,ret_pp,real,real,polymer_identity,0.024,0.025
+LGBM SHAP,Grouped by study,cd_x_sa_log,real,real,other,0.015,0.025
+LGBM SHAP,Grouped by study,sa_missing,real,real,surface_area_porosity,0.02,0.024
+LGBM SHAP,Grouped by study,ce_over_sa,real,real,solution_chemistry,0.019,0.021
+LGBM SHAP,Grouped by study,cd_x_ce_log,real,real,other,0.015,0.021
+LGBM SHAP,Grouped by study,rpm_missing,real,real,solution_chemistry,0.02,0.02
+LGBM SHAP,Grouped by study,ce_over_rpm,real,real,solution_chemistry,0.015,0.02
+LGBM SHAP,Grouped by study,ce,real,real,solution_chemistry,0.017,0.019
+LGBM SHAP,Grouped by study,fg_polar,real,real,surface_functionality,0.007,0.015
+LGBM SHAP,Grouped by study,ret_pla,real,real,polymer_identity,0.012,0.014
+LGBM SHAP,Grouped by study,temp,real,real,solution_chemistry,0.012,0.014
+LGBM SHAP,Grouped by study,ret_pa,real,real,polymer_identity,0.013,0.013
+LGBM SHAP,Grouped by study,sa,real,real,surface_area_porosity,0.011,0.013
+LGBM SHAP,Grouped by study,ph_missing,real,real,solution_chemistry,0.013,0.013
+LGBM SHAP,Grouped by study,ret_pe_x_fg_any,real,real,polymer_identity,0.011,0.01
+LGBM SHAP,Grouped by study,cr_x_sa_log,real,real,other,0.008,0.009
+LGBM SHAP,Grouped by study,sa_log1p,real,real,surface_area_porosity,0.007,0.008
+LGBM SHAP,Grouped by study,metal_cd,real,real,metal_identity,0.006,0.008
+LGBM SHAP,Grouped by study,temp_missing,real,real,solution_chemistry,0.005,0.006
+LGBM SHAP,Grouped by study,rpm_log1p,real,real,solution_chemistry,0.006,0.006
+LGBM SHAP,Grouped by study,fg_any,real,real,surface_functionality,0.002,0.004
+LGBM SHAP,Grouped by study,cd_x_ph,real,real,other,0.003,0.004
+LGBM SHAP,Grouped by study,ret_ps,real,real,polymer_identity,0.003,0.004
+LGBM SHAP,Grouped by study,metal_cr,real,real,metal_identity,0.003,0.003
+LGBM SHAP,Grouped by study,hg_x_ph,real,real,other,0.003,0.003
+LGBM SHAP,Grouped by study,ph,real,real,solution_chemistry,0.002,0.003
+LGBM SHAP,Grouped by study,ph_x_temp,real,real,solution_chemistry,0.002,0.003
+LGBM SHAP,Grouped by study,ags_virgin,real,real,aging_state,0.002,0.002
+LGBM SHAP,Grouped by study,temp_log1p,real,real,solution_chemistry,0.002,0.002
+LGBM SHAP,Grouped by study,ce_log1p,real,real,solution_chemistry,0.001,0.002
+LGBM SHAP,Grouped by study,ret_pe,real,real,polymer_identity,0.001,0.002
+LGBM SHAP,Grouped by study,metal_hg,real,real,metal_identity,0.001,0.001
+LGBM SHAP,Grouped by study,ret_ps_x_fg_any,real,real,polymer_identity,0.001,0.001
+LGBM SHAP,Grouped by study,ret_pa_x_fg_any,real,real,polymer_identity,0.001,0.001
+LGBM SHAP,Grouped by study,aged_x_fg_any,real,real,other,0.001,0.001
+LGBM SHAP,Grouped by study,ret_pvc,real,real,polymer_identity,0.0,0.0
+LGBM SHAP,Grouped by study,fg_complexing,real,real,surface_functionality,0.0,0.0
+LGBM SHAP,Grouped by study,hg_x_sa_log,real,real,other,0.0,0.0
+LGBM SHAP,Grouped by study,ret_pet,real,real,polymer_identity,0.0,0.0
+LGBM SHAP,Grouped by study,cr_x_ph,real,real,other,0.0,0.0
+LGBM SHAP,Grouped by experiment,ret_other,real,real,polymer_identity,0.063,0.077
+LGBM SHAP,Grouped by experiment,hg_x_ce_log,real,real,other,0.057,0.073
+LGBM SHAP,Grouped by experiment,aged_x_fg_complexing,real,real,other,0.056,0.071
+LGBM SHAP,Grouped by experiment,rpm_missing,real,real,solution_chemistry,0.056,0.071
+LGBM SHAP,Grouped by experiment,cr_x_ce_log,real,real,other,0.056,0.071
+LGBM SHAP,Grouped by experiment,temp_x_ce_log,real,real,solution_chemistry,0.05,0.064
+LGBM SHAP,Grouped by experiment,ph_x_ce_log,real,real,solution_chemistry,0.034,0.042
+LGBM SHAP,Grouped by experiment,sa,real,real,surface_area_porosity,0.032,0.041
+LGBM SHAP,Grouped by experiment,rpm,real,real,solution_chemistry,0.03,0.038
+LGBM SHAP,Grouped by experiment,ret_pp,real,real,polymer_identity,0.028,0.036
+LGBM SHAP,Grouped by experiment,ce_log_x_rpm_log,real,real,solution_chemistry,0.024,0.03
+LGBM SHAP,Grouped by experiment,ce_over_sa,real,real,solution_chemistry,0.021,0.027
+LGBM SHAP,Grouped by experiment,ce_over_rpm,real,real,solution_chemistry,0.016,0.019
+LGBM SHAP,Grouped by experiment,ret_pa,real,real,polymer_identity,0.015,0.019
+LGBM SHAP,Grouped by experiment,ce,real,real,solution_chemistry,0.014,0.018
+LGBM SHAP,Grouped by experiment,cd_x_ph,real,real,other,0.014,0.018
+LGBM SHAP,Grouped by experiment,cd_x_sa_log,real,real,other,0.013,0.016
+LGBM SHAP,Grouped by experiment,sa_missing,real,real,surface_area_porosity,0.012,0.016
+LGBM SHAP,Grouped by experiment,sa_log1p,real,real,surface_area_porosity,0.011,0.014
+LGBM SHAP,Grouped by experiment,ags_aged,real,real,aging_state,0.01,0.012
+LGBM SHAP,Grouped by experiment,ret_pla,real,real,polymer_identity,0.007,0.01
+LGBM SHAP,Grouped by experiment,cd_x_ce_log,real,real,other,0.007,0.009
+LGBM SHAP,Grouped by experiment,ret_ps,real,real,polymer_identity,0.005,0.007
+LGBM SHAP,Grouped by experiment,cr_x_sa_log,real,real,other,0.005,0.007
+LGBM SHAP,Grouped by experiment,ret_pe_x_fg_any,real,real,polymer_identity,0.005,0.007
+LGBM SHAP,Grouped by experiment,rpm_log1p,real,real,solution_chemistry,0.005,0.006
+LGBM SHAP,Grouped by experiment,hg_x_ph,real,real,other,0.005,0.006
+LGBM SHAP,Grouped by experiment,temp,real,real,solution_chemistry,0.004,0.005
+LGBM SHAP,Grouped by experiment,temp_missing,real,real,solution_chemistry,0.004,0.005
+LGBM SHAP,Grouped by experiment,ret_pe,real,real,polymer_identity,0.003,0.004
+LGBM SHAP,Grouped by experiment,ce_log1p,real,real,solution_chemistry,0.003,0.004
+LGBM SHAP,Grouped by experiment,ret_pa_x_fg_any,real,real,polymer_identity,0.002,0.003
+LGBM SHAP,Grouped by experiment,ph_missing,real,real,solution_chemistry,0.002,0.003
+LGBM SHAP,Grouped by experiment,temp_log1p,real,real,solution_chemistry,0.002,0.003
+LGBM SHAP,Grouped by experiment,metal_cd,real,real,metal_identity,0.002,0.002
+LGBM SHAP,Grouped by experiment,ph_x_temp,real,real,solution_chemistry,0.002,0.002
+LGBM SHAP,Grouped by experiment,metal_hg,real,real,metal_identity,0.002,0.002
+LGBM SHAP,Grouped by experiment,fg_complexing,real,real,surface_functionality,0.001,0.002
+LGBM SHAP,Grouped by experiment,fg_polar,real,real,surface_functionality,0.001,0.002
+LGBM SHAP,Grouped by experiment,ph,real,real,solution_chemistry,0.001,0.001
+LGBM SHAP,Grouped by experiment,fg_any,real,real,surface_functionality,0.001,0.001
+LGBM SHAP,Grouped by experiment,metal_cr,real,real,metal_identity,0.001,0.001
+LGBM SHAP,Grouped by experiment,ret_ps_x_fg_any,real,real,polymer_identity,0.001,0.001
+LGBM SHAP,Grouped by experiment,ret_pvc,real,real,polymer_identity,0.001,0.001
+LGBM SHAP,Grouped by experiment,hg_x_sa_log,real,real,other,0.0,0.001
+LGBM SHAP,Grouped by experiment,ret_pet,real,real,polymer_identity,0.0,0.0
+LGBM SHAP,Grouped by experiment,ags_virgin,real,real,aging_state,0.0,0.0
+LGBM SHAP,Grouped by experiment,aged_x_fg_any,real,real,other,0.0,0.0
+LGBM SHAP,Grouped by experiment,cr_x_ph,real,real,other,0.0,0.0
+LGBM SHAP,Random CV,temp_x_ce_log,real,real,solution_chemistry,0.062,0.078
+LGBM SHAP,Random CV,ret_other,real,real,polymer_identity,0.061,0.078
+LGBM SHAP,Random CV,cr_x_ce_log,real,real,other,0.06,0.076
+LGBM SHAP,Random CV,hg_x_ce_log,real,real,other,0.058,0.074
+LGBM SHAP,Random CV,rpm_missing,real,real,solution_chemistry,0.056,0.07
+LGBM SHAP,Random CV,aged_x_fg_complexing,real,real,other,0.052,0.066
+LGBM SHAP,Random CV,ph_x_ce_log,real,real,solution_chemistry,0.035,0.045
+LGBM SHAP,Random CV,sa,real,real,surface_area_porosity,0.034,0.044
+LGBM SHAP,Random CV,rpm,real,real,solution_chemistry,0.028,0.035
+LGBM SHAP,Random CV,ret_pp,real,real,polymer_identity,0.027,0.035
+LGBM SHAP,Random CV,ce_log_x_rpm_log,real,real,solution_chemistry,0.023,0.029
+LGBM SHAP,Random CV,ret_pa,real,real,polymer_identity,0.018,0.023
+LGBM SHAP,Random CV,ags_aged,real,real,aging_state,0.016,0.02
+LGBM SHAP,Random CV,ce_over_sa,real,real,solution_chemistry,0.015,0.019
+LGBM SHAP,Random CV,ce,real,real,solution_chemistry,0.014,0.017
+LGBM SHAP,Random CV,ce_over_rpm,real,real,solution_chemistry,0.013,0.017
+LGBM SHAP,Random CV,ret_pla,real,real,polymer_identity,0.012,0.015
+LGBM SHAP,Random CV,cd_x_sa_log,real,real,other,0.012,0.015
+LGBM SHAP,Random CV,cd_x_ph,real,real,other,0.01,0.013
+LGBM SHAP,Random CV,sa_log1p,real,real,surface_area_porosity,0.008,0.01
+LGBM SHAP,Random CV,sa_missing,real,real,surface_area_porosity,0.008,0.01
+LGBM SHAP,Random CV,cd_x_ce_log,real,real,other,0.007,0.009
+LGBM SHAP,Random CV,cr_x_sa_log,real,real,other,0.007,0.009
+LGBM SHAP,Random CV,ret_pe_x_fg_any,real,real,polymer_identity,0.006,0.008
+LGBM SHAP,Random CV,ret_pe,real,real,polymer_identity,0.004,0.006
+LGBM SHAP,Random CV,rpm_log1p,real,real,solution_chemistry,0.004,0.005
+LGBM SHAP,Random CV,ret_ps,real,real,polymer_identity,0.004,0.005
+LGBM SHAP,Random CV,temp_missing,real,real,solution_chemistry,0.004,0.005
+LGBM SHAP,Random CV,temp,real,real,solution_chemistry,0.004,0.005
+LGBM SHAP,Random CV,hg_x_ph,real,real,other,0.003,0.004
+LGBM SHAP,Random CV,temp_log1p,real,real,solution_chemistry,0.003,0.004
+LGBM SHAP,Random CV,ph_missing,real,real,solution_chemistry,0.003,0.004
+LGBM SHAP,Random CV,fg_polar,real,real,surface_functionality,0.003,0.004
+LGBM SHAP,Random CV,ph_x_temp,real,real,solution_chemistry,0.002,0.003
+LGBM SHAP,Random CV,ret_pa_x_fg_any,real,real,polymer_identity,0.002,0.002
+LGBM SHAP,Random CV,ags_virgin,real,real,aging_state,0.001,0.002
+LGBM SHAP,Random CV,ce_log1p,real,real,solution_chemistry,0.001,0.002
+LGBM SHAP,Random CV,ph,real,real,solution_chemistry,0.001,0.002
+LGBM SHAP,Random CV,metal_cd,real,real,metal_identity,0.001,0.001
+LGBM SHAP,Random CV,fg_any,real,real,surface_functionality,0.001,0.001
+LGBM SHAP,Random CV,metal_cr,real,real,metal_identity,0.001,0.001
+LGBM SHAP,Random CV,ret_ps_x_fg_any,real,real,polymer_identity,0.001,0.001
+LGBM SHAP,Random CV,metal_hg,real,real,metal_identity,0.001,0.001
+LGBM SHAP,Random CV,hg_x_sa_log,real,real,other,0.001,0.001
+LGBM SHAP,Random CV,ret_pvc,real,real,polymer_identity,0.001,0.001
+LGBM SHAP,Random CV,fg_complexing,real,real,surface_functionality,0.0,0.0
+LGBM SHAP,Random CV,ret_pet,real,real,polymer_identity,0.0,0.0
+LGBM SHAP,Random CV,aged_x_fg_any,real,real,other,0.0,0.0
+LGBM SHAP,Random CV,cr_x_ph,real,real,other,0.0,0.0

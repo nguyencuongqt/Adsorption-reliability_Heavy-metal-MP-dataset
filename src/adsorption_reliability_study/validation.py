@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.model_selection import GroupKFold, LeaveOneGroupOut, RepeatedKFold
+from sklearn.model_selection import GroupKFold, RepeatedKFold
 
 from .config import StudyConfig
 
@@ -35,12 +35,6 @@ def build_splits(df: pd.DataFrame, config: StudyConfig) -> list[SplitSpec]:
         groups = df[group_column].to_numpy()
         for split_number, (train_index, test_index) in enumerate(cv.split(indices, groups=groups), start=1):
             splits.append(SplitSpec(regime, f"{regime}_{split_number:02d}", train_index, test_index))
-
-    if config.include_optional_regime and config.optional_regime == "leave_one_study_out":
-        logo = LeaveOneGroupOut()
-        groups = df["aut_id"].to_numpy()
-        for split_number, (train_index, test_index) in enumerate(logo.split(indices, groups=groups), start=1):
-            splits.append(SplitSpec("leave_one_study_out", f"leave_one_study_out_{split_number:02d}", train_index, test_index))
 
     return splits
 

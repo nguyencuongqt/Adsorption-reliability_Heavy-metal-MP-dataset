@@ -13,7 +13,6 @@
   "regimes": [
     "group_aut",
     "group_exp",
-    "leave_one_study_out",
     "random_cv"
   ]
 }

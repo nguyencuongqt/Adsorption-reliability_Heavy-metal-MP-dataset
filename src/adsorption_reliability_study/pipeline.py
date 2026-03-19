@@ -30,6 +30,7 @@ from .reporting import (
     plot_null_benchmark,
     plot_stability_heatmap,
     plot_validation_hierarchy,
+    plot_validation_hierarchy_r2,
     save_table,
 )
 from .validation import build_generalization_gap_table, build_splits, regression_metrics, summarize_metrics
@@ -101,6 +102,7 @@ def run_rq1() -> dict[str, str]:
     save_table(dictionary_df, tables_dir / "feature_dictionary.csv")
     save_table(predictions_df, tables_dir / "rq1_out_of_fold_predictions.csv")
     plot_validation_hierarchy(summary_df, figures_dir / "figure_validation_hierarchy_performance_drop.png")
+    plot_validation_hierarchy_r2(summary_df, figures_dir / "figure_validation_hierarchy_r2.png")
 
     manifest = {
         "study": "adsorption_reliability_study",
@@ -136,8 +138,6 @@ def run_rq2() -> dict[str, str]:
     importance_rows: list[pd.DataFrame] = []
     regime_counts: dict[str, int] = {}
     for split_number, split in enumerate(splits, start=1):
-        if split.regime == "leave_one_study_out":
-            continue
         if regime_counts.get(split.regime, 0) >= 5:
             continue
         regime_counts[split.regime] = regime_counts.get(split.regime, 0) + 1

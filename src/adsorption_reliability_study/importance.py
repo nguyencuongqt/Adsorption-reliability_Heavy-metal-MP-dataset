@@ -15,8 +15,8 @@ def _normalize_importance(frame: pd.DataFrame) -> pd.DataFrame:
     total = working["importance"].sum()
     working["importance_share"] = 0.0 if total <= 0 else working["importance"] / total
     working["mechanism_group"] = working["feature"].map(feature_group)
-    working["feature_type"] = np.where(working["feature"].str.startswith("null_"), "null", "real")
     working["null_type"] = working["feature"].map(null_feature_type)
+    working["feature_type"] = np.where(working["null_type"] == "real", "real", "null")
     return working
 
 

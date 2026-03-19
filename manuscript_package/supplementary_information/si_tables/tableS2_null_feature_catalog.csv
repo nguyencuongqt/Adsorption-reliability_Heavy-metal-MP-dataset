@@ -1,0 +1,8 @@
+Name,Type,Construction
+null_random_normal,Pure noise,"Independent Gaussian noise sampled from N(0,1) for each row."
+null_random_uniform,Pure noise,"Independent continuous noise sampled from a uniform distribution on [-1,1] for each row."
+null_random_binary,Pure noise,Independent Bernoulli-like binary noise sampled as 0 or 1 for each row.
+null_perm_ph,Permuted feature,"Row-wise permutation of the observed pH values, preserving the marginal distribution while breaking row-level association with qe."
+null_perm_ce,Permuted feature,"Row-wise permutation of the observed equilibrium concentration (ce) values, preserving the marginal distribution while breaking row-level association with qe."
+null_study_random_effect,Group-aware,Random normal value assigned at the study level and broadcast to all rows sharing the same aut_id.
+null_exp_random_effect,Group-aware,Random normal value assigned at the experiment level and broadcast to all rows sharing the same exp_id.

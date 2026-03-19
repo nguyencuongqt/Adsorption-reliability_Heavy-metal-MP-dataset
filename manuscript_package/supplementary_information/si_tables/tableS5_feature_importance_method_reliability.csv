@@ -1,0 +1,16 @@
+Importance method,Validation regime,mean_null_share,mean_real_null_gap,mean_top10_null_fraction,rank_stability,regime_robustness,heuristic_reliability_score
+LGBM gain,Random CV,0.0,0.007,0.0,0.979,0.988,3.038
+LGBM gain,Grouped by experiment,0.0,0.007,0.0,0.961,0.988,3.017
+LGBM gain,Grouped by study,0.0,0.007,0.0,0.888,0.988,2.943
+LGBM SHAP,Random CV,0.0,0.007,0.0,0.912,0.91,2.889
+LGBM SHAP,Grouped by experiment,0.0,0.006,0.0,0.869,0.91,2.844
+EN coefficient,Random CV,0.0,0.0,0.0,0.871,0.916,2.787
+EN coefficient,Grouped by experiment,0.0,0.0,0.0,0.795,0.916,2.711
+LGBM SHAP,Grouped by study,0.0,0.005,0.0,0.561,0.91,2.521
+EN coefficient,Grouped by study,0.0,0.0,0.0,0.572,0.916,2.488
+LGBM permutation,Random CV,0.0,0.001,0.0,0.648,0.718,2.379
+EN permutation,Grouped by experiment,0.0,0.0,0.0,0.456,0.765,2.223
+EN permutation,Random CV,0.0,0.0,0.0,0.444,0.765,2.21
+LGBM permutation,Grouped by experiment,0.0,0.001,0.0,0.381,0.718,2.11
+LGBM permutation,Grouped by study,0.0,0.0,0.0,0.124,0.718,1.843
+EN permutation,Grouped by study,0.0,0.0,0.0,-0.03,0.765,1.765

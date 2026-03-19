@@ -1,17 +1,28 @@
-metric,value
-n_rows,1009.0
-n_real_features,25.0
-n_studies,23.0
-n_experiments,149.0
-median_rows_per_study,38.0
-max_rows_per_study,180.0
-median_rows_per_experiment,6.0
-max_rows_per_experiment,10.0
-median_qe,0.10325
-p95_qe,5.0518166071999975
-max_qe,17.77876
-missing_fraction_ph,0.533201189296333
-missing_fraction_sa,0.379583746283449
-rows_metal_cd,535.0
-rows_metal_cr,308.0
-rows_metal_hg,166.0
+Domain,Statistic,Value,Unit/Note
+Dataset scope,Observations,1009,rows
+Dataset scope,Real predictors,25,variables
+Dataset scope,Studies,23,aut_id
+Dataset scope,Experiments,149,exp_id
+Grouped structure,Median rows per study,38,rows
+Grouped structure,Maximum rows per study,180,rows
+Grouped structure,Median rows per experiment,6,rows
+Grouped structure,Maximum rows per experiment,10,rows
+Target distribution,Median qe,0.103,mg g^-1
+Target distribution,IQR qe,0.032-0.454,mg g^-1
+Target distribution,95th percentile qe,5.052,mg g^-1
+Target distribution,Maximum qe,17.779,mg g^-1
+Reporting completeness,Missing pH,53.3%,of rows
+Reporting completeness,Missing surface area,38.0%,of rows
+Reporting completeness,Missing temperature,10.3%,of rows
+Reporting completeness,Missing agitation speed,5.4%,of rows
+Metal composition,Cd(II),535 (53.0%),rows (%)
+Metal composition,Cr(VI),308 (30.5%),rows (%)
+Metal composition,Hg(II),166 (16.5%),rows (%)
+Polymer composition,PE,154 (15.3%),rows (%)
+Polymer composition,PP,60 (5.9%),rows (%)
+Polymer composition,PS,382 (37.9%),rows (%)
+Polymer composition,PVC,58 (5.7%),rows (%)
+Polymer composition,PET,110 (10.9%),rows (%)
+Polymer composition,PA,126 (12.5%),rows (%)
+Polymer composition,PLA,54 (5.4%),rows (%)
+Polymer composition,Other,65 (6.4%),rows (%)

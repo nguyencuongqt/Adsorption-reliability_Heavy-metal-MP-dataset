@@ -1,0 +1,121 @@
+Importance method,Validation regime,mechanism_group,mean_importance_share
+EN coefficient,Grouped by study,solution_chemistry,0.062
+EN coefficient,Grouped by study,aging_state,0.0
+EN coefficient,Grouped by study,metal_identity,0.0
+EN coefficient,Grouped by study,null_feature,0.0
+EN coefficient,Grouped by study,other,0.0
+EN coefficient,Grouped by study,polymer_identity,0.0
+EN coefficient,Grouped by study,surface_area_porosity,0.0
+EN coefficient,Grouped by study,surface_functionality,0.0
+EN coefficient,Grouped by experiment,solution_chemistry,0.062
+EN coefficient,Grouped by experiment,aging_state,0.0
+EN coefficient,Grouped by experiment,metal_identity,0.0
+EN coefficient,Grouped by experiment,null_feature,0.0
+EN coefficient,Grouped by experiment,other,0.0
+EN coefficient,Grouped by experiment,polymer_identity,0.0
+EN coefficient,Grouped by experiment,surface_area_porosity,0.0
+EN coefficient,Grouped by experiment,surface_functionality,0.0
+EN coefficient,Random CV,solution_chemistry,0.062
+EN coefficient,Random CV,aging_state,0.0
+EN coefficient,Random CV,metal_identity,0.0
+EN coefficient,Random CV,null_feature,0.0
+EN coefficient,Random CV,other,0.0
+EN coefficient,Random CV,polymer_identity,0.0
+EN coefficient,Random CV,surface_area_porosity,0.0
+EN coefficient,Random CV,surface_functionality,0.0
+EN permutation,Grouped by study,solution_chemistry,0.056
+EN permutation,Grouped by study,surface_area_porosity,0.007
+EN permutation,Grouped by study,null_feature,0.007
+EN permutation,Grouped by study,other,0.002
+EN permutation,Grouped by study,aging_state,0.001
+EN permutation,Grouped by study,metal_identity,0.001
+EN permutation,Grouped by study,polymer_identity,0.0
+EN permutation,Grouped by study,surface_functionality,0.0
+EN permutation,Grouped by experiment,solution_chemistry,0.061
+EN permutation,Grouped by experiment,surface_area_porosity,0.002
+EN permutation,Grouped by experiment,null_feature,0.001
+EN permutation,Grouped by experiment,metal_identity,0.0
+EN permutation,Grouped by experiment,other,0.0
+EN permutation,Grouped by experiment,polymer_identity,0.0
+EN permutation,Grouped by experiment,aging_state,0.0
+EN permutation,Grouped by experiment,surface_functionality,0.0
+EN permutation,Random CV,solution_chemistry,0.062
+EN permutation,Random CV,null_feature,0.001
+EN permutation,Random CV,surface_area_porosity,0.001
+EN permutation,Random CV,other,0.0
+EN permutation,Random CV,metal_identity,0.0
+EN permutation,Random CV,polymer_identity,0.0
+EN permutation,Random CV,aging_state,0.0
+EN permutation,Random CV,surface_functionality,0.0
+LGBM gain,Grouped by study,null_feature,0.051
+LGBM gain,Grouped by study,surface_area_porosity,0.024
+LGBM gain,Grouped by study,solution_chemistry,0.022
+LGBM gain,Grouped by study,other,0.014
+LGBM gain,Grouped by study,aging_state,0.005
+LGBM gain,Grouped by study,polymer_identity,0.004
+LGBM gain,Grouped by study,metal_identity,0.001
+LGBM gain,Grouped by study,surface_functionality,0.001
+LGBM gain,Grouped by experiment,null_feature,0.052
+LGBM gain,Grouped by experiment,surface_area_porosity,0.022
+LGBM gain,Grouped by experiment,solution_chemistry,0.021
+LGBM gain,Grouped by experiment,other,0.015
+LGBM gain,Grouped by experiment,polymer_identity,0.004
+LGBM gain,Grouped by experiment,aging_state,0.003
+LGBM gain,Grouped by experiment,metal_identity,0.001
+LGBM gain,Grouped by experiment,surface_functionality,0.001
+LGBM gain,Random CV,null_feature,0.051
+LGBM gain,Random CV,surface_area_porosity,0.023
+LGBM gain,Random CV,solution_chemistry,0.021
+LGBM gain,Random CV,other,0.016
+LGBM gain,Random CV,polymer_identity,0.004
+LGBM gain,Random CV,aging_state,0.003
+LGBM gain,Random CV,metal_identity,0.001
+LGBM gain,Random CV,surface_functionality,0.001
+LGBM permutation,Grouped by study,aging_state,0.041
+LGBM permutation,Grouped by study,null_feature,0.032
+LGBM permutation,Grouped by study,surface_area_porosity,0.024
+LGBM permutation,Grouped by study,polymer_identity,0.02
+LGBM permutation,Grouped by study,solution_chemistry,0.015
+LGBM permutation,Grouped by study,other,0.014
+LGBM permutation,Grouped by study,surface_functionality,0.001
+LGBM permutation,Grouped by study,metal_identity,0.0
+LGBM permutation,Grouped by experiment,other,0.043
+LGBM permutation,Grouped by experiment,solution_chemistry,0.019
+LGBM permutation,Grouped by experiment,surface_area_porosity,0.016
+LGBM permutation,Grouped by experiment,null_feature,0.01
+LGBM permutation,Grouped by experiment,aging_state,0.01
+LGBM permutation,Grouped by experiment,polymer_identity,0.007
+LGBM permutation,Grouped by experiment,metal_identity,0.001
+LGBM permutation,Grouped by experiment,surface_functionality,0.0
+LGBM permutation,Random CV,other,0.035
+LGBM permutation,Random CV,solution_chemistry,0.019
+LGBM permutation,Random CV,null_feature,0.016
+LGBM permutation,Random CV,aging_state,0.014
+LGBM permutation,Random CV,polymer_identity,0.013
+LGBM permutation,Random CV,surface_area_porosity,0.011
+LGBM permutation,Random CV,metal_identity,0.001
+LGBM permutation,Random CV,surface_functionality,0.0
+LGBM SHAP,Grouped by study,null_feature,0.029
+LGBM SHAP,Grouped by study,aging_state,0.024
+LGBM SHAP,Grouped by study,other,0.021
+LGBM SHAP,Grouped by study,solution_chemistry,0.02
+LGBM SHAP,Grouped by study,surface_area_porosity,0.015
+LGBM SHAP,Grouped by study,polymer_identity,0.01
+LGBM SHAP,Grouped by study,surface_functionality,0.007
+LGBM SHAP,Grouped by study,metal_identity,0.004
+LGBM SHAP,Grouped by experiment,other,0.025
+LGBM SHAP,Grouped by experiment,surface_area_porosity,0.024
+LGBM SHAP,Grouped by experiment,solution_chemistry,0.021
+LGBM SHAP,Grouped by experiment,null_feature,0.019
+LGBM SHAP,Grouped by experiment,polymer_identity,0.015
+LGBM SHAP,Grouped by experiment,aging_state,0.006
+LGBM SHAP,Grouped by experiment,metal_identity,0.002
+LGBM SHAP,Grouped by experiment,surface_functionality,0.002
+LGBM SHAP,Random CV,other,0.024
+LGBM SHAP,Random CV,surface_area_porosity,0.021
+LGBM SHAP,Random CV,solution_chemistry,0.021
+LGBM SHAP,Random CV,null_feature,0.018
+LGBM SHAP,Random CV,polymer_identity,0.016
+LGBM SHAP,Random CV,aging_state,0.011
+LGBM SHAP,Random CV,surface_functionality,0.002
+LGBM SHAP,Random CV,metal_identity,0.001

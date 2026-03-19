@@ -21,8 +21,6 @@ This folder is the final active project in this repository. It focuses on reliab
 - `random_cv`: row-level interpolation within the observed literature domain
 - `group_exp`: transfer to unseen experiments while some study context remains represented
 - `group_aut`: transfer to unseen studies
-- `leave_one_study_out`: optional stronger stress test for study-level domain shift
-
 Grouped validation matters because this dataset is hierarchical: rows are nested inside experiments and studies, so naive random splitting can leak study fingerprints and inflate apparent performance.
 
 ## Interpretation Philosophy

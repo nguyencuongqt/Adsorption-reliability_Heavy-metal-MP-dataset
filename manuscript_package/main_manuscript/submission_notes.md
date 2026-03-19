@@ -8,6 +8,8 @@ This manuscript package belongs only to the fresh `adsorption_reliability_study`
 
 - add author names, affiliations, and correspondence details
 - insert curated references and in-text citations
-- confirm target journal title style and abstract length
+- confirm the final title, abstract, and highlights against Water Research house style
 - review wording around mechanism claims and keep causal language conservative
-- confirm whether the optional `leave_one_study_out` stress test should remain in SI only
+- prepare a graphical abstract sized for the journal submission system
+- confirm the AI declaration wording and keep it consistent with journal policy
+- prepare a conflict-of-interest statement and CRediT author roles
