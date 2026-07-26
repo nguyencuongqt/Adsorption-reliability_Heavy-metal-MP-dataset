@@ -3,5 +3,6 @@ pandas
 scikit-learn
 matplotlib
 shap
-python-docx
+lightgbm
+scipy
 Pillow

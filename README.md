@@ -1,6 +1,11 @@
-# Adsorption Reliability Study: Grouped Validation and Null-Anchored Interpretation
+# Reliability of Heavy-Metal Adsorption Models for Microplastics
 
-This folder is the final active project in this repository. It focuses on reliability of prediction and reliability of interpretation under grouped literature-derived environmental data, while reusing the stronger legacy training pipeline for feature engineering and train-fold preprocessing.
+This repository contains the analysis dataset, source code, configuration,
+machine-readable results, and selected figures supporting a study of predictive
+and interpretive reliability in literature-derived adsorption data.
+
+The dataset contains 1,009 observations from 149 experiments nested within
+23 studies.
 
 ## Research Questions
 
@@ -21,81 +26,86 @@ This folder is the final active project in this repository. It focuses on reliab
 - `random_cv`: row-level interpolation within the observed literature domain
 - `group_exp`: transfer to unseen experiments while some study context remains represented
 - `group_aut`: transfer to unseen studies
+
 Grouped validation matters because this dataset is hierarchical: rows are nested inside experiments and studies, so naive random splitting can leak study fingerprints and inflate apparent performance.
 
 ## Interpretation Philosophy
 
 Feature importance is method-sensitive and model-sensitive. Importance can indicate predictive relevance under a particular model and validation regime, but it is not causal evidence. This study therefore stress-tests interpretation with multiple methods and synthetic null features.
 
-## Fresh Inputs Used
+## Repository contents
 
-- [05_modeling_dataset_final.csv](G:\My Drive\Multi_metal MP prediction\adsorption_reliability_study\data\inputs\05_modeling_dataset_final.csv)
-- [ml_feature_inventory.csv](G:\My Drive\Multi_metal MP prediction\adsorption_reliability_study\data\inputs\ml_feature_inventory.csv)
-- [author_year_registry.csv](G:\My Drive\Multi_metal MP prediction\adsorption_reliability_study\data\inputs\author_year_registry.csv)
+- `data/inputs/05_modeling_dataset_final.csv`: locked modeling dataset
+- `data/inputs/ml_feature_inventory.csv`: feature inventory
+- `data/inputs/author_year_registry.csv`: study registry
+- `configs/study_config.json`: analysis configuration
+- `src/adsorption_reliability_study/`: analysis modules
+- `scripts/`: command-line runners
+- `results/tables/`: primary machine-readable results
+- `results/nested_tuning/`: nested-tuning sensitivity results
+- `results/figures/`: selected figures in PNG format
 
-## Reproducible Runs
+## Environment setup
 
-- `python scripts/01_run_rq1.py`
-- `python scripts/02_run_rq2.py`
-- `python scripts/03_run_full_study.py`
-
-## Environment Setup
-
-Install public Python dependencies:
-
-```powershell
-pip install -r requirements.txt
-```
-
-This project also reuses legacy code from `ml_benchmark`, which is not bundled inside this repository. Before running the study scripts, make sure the legacy `ml_benchmark` source is available in your broader workspace and importable from Python.
-
-Windows quick setup:
-
-```powershell
-.\setup.ps1
-```
-
-Conda alternative:
+Create the Conda environment:
 
 ```powershell
 conda env create -f environment.yml
 conda activate adsorption-reliability-study
 ```
 
-## Output Layout
-
-- `results/tables/`: machine-readable result tables
-- `results/figures/`: manuscript-support figures
-- `results/logs/`: run manifests and hashes
-- `docs/`: project notes and discussion notes
-
-## Git Workflow
-
-Basic daily workflow in this repository:
+Alternatively, install the dependencies with pip:
 
 ```powershell
-git pull
-git status
-git add .
-git commit -m "Short description of the change"
-git push
+python -m pip install -r requirements.txt
 ```
 
-Create a new branch for a focused change:
+## Reproducible sensitivity analysis
+
+The nested-tuning analysis is self-contained within this repository:
 
 ```powershell
-git checkout -b feature/short-name
+python scripts/13_run_nested_tuning.py
 ```
 
-Switch back to the main branch:
+It retains the locked dataset and outer validation splits, while selecting
+hyperparameters only within each outer-training set. Outputs are written to
+`results/nested_tuning/`.
 
-```powershell
-git checkout master
-git pull
-```
+## Archived primary analysis
 
-Useful checks:
+The primary RQ1 and RQ2 tables and figures are retained as analysis artifacts.
+Their original fixed-model pipeline used an external legacy model builder that
+is not distributed in this repository. Therefore, the commands
+`scripts/01_run_rq1.py` through `scripts/03_run_full_study.py` document the
+original workflow but are not presented as a fully standalone reconstruction.
+The nested-tuning runner above is the independently executable sensitivity
+analysis.
 
-- `git status`: see changed files
-- `git log --oneline -5`: see recent commits
-- `git remote -v`: confirm the connected GitHub repository
+## Validation design
+
+- `random_cv`: repeated row-level cross-validation
+- `group_exp`: grouped cross-validation by experiment
+- `group_aut`: grouped cross-validation by study
+
+All reported imputation, scaling, target transformation, and model fitting are
+performed within training folds. Feature importance is interpreted as
+predictive relevance under a specified model and validation design, not as
+causal evidence.
+
+## Core results
+
+- Row-level validation produced more optimistic performance than study-level
+  transfer for the nonlinear models.
+- Study-level transfer was weak and variable across model classes.
+- Importance rankings varied across models, methods, and validation regimes.
+- Synthetic null features were used to audit spurious attribution.
+
+See `results/tables/` for the primary summaries and
+`results/nested_tuning/nested_tuning_report.md` for the tuning sensitivity
+analysis.
+
+## Scope
+
+Submission documents, working notes, copyrighted literature files, temporary
+renders, and duplicate high-resolution exports are intentionally excluded.

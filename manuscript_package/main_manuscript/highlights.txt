@@ -1,5 +1,0 @@
-- Grouped validation cut performance relative to random row-level CV.
-- Study-level transfer remained weak across all tested models.
-- LGBM led experiment-level transfer, not study-level transfer.
-- Null features exposed method-specific interpretation fragility.
-- Stable rankings did not guarantee reliable feature importance.
