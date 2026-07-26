@@ -1,28 +1,15 @@
-Domain,Statistic,Value,Unit/Note
-Dataset scope,Observations,1009,rows
-Dataset scope,Real predictors,25,variables
-Dataset scope,Studies,23,aut_id
-Dataset scope,Experiments,149,exp_id
-Grouped structure,Median rows per study,38,rows
-Grouped structure,Maximum rows per study,180,rows
-Grouped structure,Median rows per experiment,6,rows
-Grouped structure,Maximum rows per experiment,10,rows
-Target distribution,Median qe,0.103,mg g^-1
-Target distribution,IQR qe,0.032-0.454,mg g^-1
-Target distribution,95th percentile qe,5.052,mg g^-1
-Target distribution,Maximum qe,17.779,mg g^-1
-Reporting completeness,Missing pH,53.3%,of rows
-Reporting completeness,Missing surface area,38.0%,of rows
-Reporting completeness,Missing temperature,10.3%,of rows
-Reporting completeness,Missing agitation speed,5.4%,of rows
-Metal composition,Cd(II),535 (53.0%),rows (%)
-Metal composition,Cr(VI),308 (30.5%),rows (%)
-Metal composition,Hg(II),166 (16.5%),rows (%)
-Polymer composition,PE,154 (15.3%),rows (%)
-Polymer composition,PP,60 (5.9%),rows (%)
-Polymer composition,PS,382 (37.9%),rows (%)
-Polymer composition,PVC,58 (5.7%),rows (%)
-Polymer composition,PET,110 (10.9%),rows (%)
-Polymer composition,PA,126 (12.5%),rows (%)
-Polymer composition,PLA,54 (5.4%),rows (%)
-Polymer composition,Other,65 (6.4%),rows (%)
+Section,Metric,Value,Unit/Note
+Corpus structure,Observations / studies / experiments,1009 / 23 / 149,rows / studies / experiments
+Corpus structure,Rows per study: median (IQR) / maximum,38 (22-45) / 180,rows
+Corpus structure,Top-3 studies share,35.2,% of rows
+Corpus structure,Rows per experiment: median (IQR) / maximum,6 (6-8) / 10,rows
+Adsorption-capacity distribution,Cd(II) qe: median (IQR) / 95th percentile / maximum,0.107 (0.040-0.291) / 3.513 / 10.558,mg g^-1
+Adsorption-capacity distribution,Cr(VI) qe: median (IQR) / 95th percentile / maximum,0.215 (0.071-0.657) / 3.794 / 9.649,mg g^-1
+Adsorption-capacity distribution,Hg(II) qe: median (IQR) / 95th percentile / maximum,0.008 (0.003-0.353) / 13.468 / 17.779,mg g^-1
+Composition,Cd(II) / Cr(VI) / Hg(II),53.0 / 30.5 / 16.5,% of rows
+Composition,PS / PE / PA / PET / PP / PVC / PLA / Other,37.9 / 15.3 / 12.5 / 10.9 / 5.9 / 5.7 / 5.4 / 6.4,% of rows
+Composition,Aged / virgin,52.0 / 48.0,% of rows
+Coverage,Metal x polymer x aging cells populated / total,40 / 48,cells
+Coverage,Absent cells,8 / 48,cells
+Coverage,Populated cells still very sparse or thin,22 / 40,cells
+Reporting completeness,Missing pH / sa / temp / rpm,53.3 / 38.0 / 10.3 / 5.4,% of rows

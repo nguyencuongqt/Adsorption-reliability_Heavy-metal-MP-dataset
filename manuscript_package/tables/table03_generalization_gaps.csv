@@ -1,7 +1,0 @@
-Validation regime,Model,Delta R2 vs random,Delta RMSE vs random,Delta MAE vs random
-Grouped by study,EN,-0.918,-0.473,0.012
-Grouped by study,LGBM,-10.625,1.143,0.707
-Grouped by study,MLP,-21745.451,18.862,15.304
-Grouped by experiment,EN,0.004,-0.119,0.007
-Grouped by experiment,LGBM,-0.146,0.206,0.123
-Grouped by experiment,MLP,-0.209,0.479,0.245

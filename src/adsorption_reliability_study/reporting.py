@@ -10,9 +10,9 @@ import pandas as pd
 REGIME_ORDER = ["random_cv", "group_exp", "group_aut"]
 MAIN_REGIME_ORDER = ["random_cv", "group_exp", "group_aut"]
 REGIME_LABELS = {
-    "random_cv": "Random CV",
-    "group_exp": "Grouped\nexperiment",
-    "group_aut": "Grouped\nstudy",
+    "random_cv": "RRCV",
+    "group_exp": "EGCV",
+    "group_aut": "SGCV",
 }
 MODEL_LABELS = {
     "elastic_net": "EN",
@@ -157,7 +157,7 @@ def plot_validation_hierarchy(summary_df: pd.DataFrame, path: Path) -> None:
     ax_ratio.axhline(1.0, color="#7A7A7A", linewidth=1.1, linestyle="--")
     ax_ratio.set_yscale("log")
     ax_ratio.set_xticks(x_ratio, [REGIME_LABELS.get(regime, regime) for regime in ratio_order])
-    ax_ratio.set_ylabel("RMSE relative to random CV")
+    ax_ratio.set_ylabel("RMSE relative to RRCV")
     ax_ratio.text(-0.16, 1.03, "B", transform=ax_ratio.transAxes, fontsize=12, fontweight="bold")
     ratio_top = max(float(np.nanmax(ratio_df["rmse_ratio_vs_random"])), 2.0)
     ax_ratio.set_ylim(0.7, ratio_top * 1.25)
@@ -267,13 +267,13 @@ def plot_mechanism_heatmap(mechanism_df: pd.DataFrame, path: Path) -> None:
         .fillna(0.0)
     )
     plot_df = plot_df.rename(index=METHOD_LABELS)
+    plot_df = plot_df.rename(columns={"solution_chemistry": "solution_condition"})
     fig, ax = plt.subplots(figsize=(10, 4.5))
     image = ax.imshow(plot_df.to_numpy(), aspect="auto", cmap="viridis")
     ax.set_xticks(np.arange(plot_df.shape[1]))
     ax.set_xticklabels(plot_df.columns, rotation=30, ha="right")
     ax.set_yticks(np.arange(plot_df.shape[0]))
     ax.set_yticklabels(plot_df.index)
-    ax.set_title("Mechanism-group importance across methods")
     cbar = fig.colorbar(image, ax=ax)
     cbar.set_label("Mean importance share")
     fig.tight_layout()
@@ -306,8 +306,7 @@ def plot_null_benchmark(reliability_df: pd.DataFrame, path: Path) -> None:
     axes[1].set_xlabel("Mean rank stability")
     axes[1].grid(axis="x", alpha=0.2)
 
-    fig.suptitle("Null-feature benchmarking across importance methods")
-    fig.tight_layout(rect=(0, 0.02, 1, 0.94))
+    fig.tight_layout()
     fig.savefig(path, dpi=300)
     plt.close(fig)
 

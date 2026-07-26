@@ -114,47 +114,137 @@ def build_dataset_structure_table(df: pd.DataFrame, real_features: list[str]) ->
     rows_per_study = df.groupby("aut_id").size()
     rows_per_experiment = df.groupby("exp_id").size()
     total_rows = int(len(df))
+    coverage_cells_total = 3 * 8 * 2
+
+    metal_frames = {
+        "Cd(II)": df[df["metal_cd"] == 1],
+        "Cr(VI)": df[df["metal_cr"] == 1],
+        "Hg(II)": df[df["metal_hg"] == 1],
+    }
 
     def count_pct(column: str) -> str:
         count = int(df.get(column, pd.Series(dtype=float)).fillna(0).sum())
         return f"{count} ({count / total_rows * 100:.1f}%)"
 
+    def pct_only(column: str) -> str:
+        count = int(df.get(column, pd.Series(dtype=float)).fillna(0).sum())
+        return f"{count / total_rows * 100:.1f}"
+
     def pct_missing(column: str) -> str:
         return f"{df[column].isna().mean() * 100:.1f}%"
 
+    def pct_missing_value(column: str) -> str:
+        return f"{df[column].isna().mean() * 100:.1f}"
+
+    def qe_summary(frame: pd.DataFrame) -> str:
+        return (
+            f"{frame['qe'].median():.3f} "
+            f"({frame['qe'].quantile(0.25):.3f}-{frame['qe'].quantile(0.75):.3f}) / "
+            f"{frame['qe'].quantile(0.95):.3f} / {frame['qe'].max():.3f}"
+        )
+
+    polymer_columns = ["ret_ps", "ret_pe", "ret_pa", "ret_pet", "ret_pp", "ret_pvc", "ret_pla", "ret_other"]
+    populated_cells = 0
+    sparse_or_thin_cells = 0
+    for metal_column in ["metal_cd", "metal_cr", "metal_hg"]:
+        metal_df = df[df[metal_column] == 1]
+        for polymer_column in polymer_columns:
+            polymer_df = metal_df[metal_df[polymer_column] == 1]
+            for aging_column in ["ags_aged", "ags_virgin"]:
+                n_rows = int(polymer_df[polymer_df[aging_column] == 1].shape[0])
+                if n_rows > 0:
+                    populated_cells += 1
+                    if 1 <= n_rows <= 20:
+                        sparse_or_thin_cells += 1
+
     records = [
-        {"Domain": "Dataset scope", "Statistic": "Observations", "Value": f"{total_rows}", "Unit/Note": "rows"},
-        {"Domain": "Dataset scope", "Statistic": "Real predictors", "Value": f"{int(len(real_features))}", "Unit/Note": "variables"},
-        {"Domain": "Dataset scope", "Statistic": "Studies", "Value": f"{int(df['aut_id'].nunique())}", "Unit/Note": "aut_id"},
-        {"Domain": "Dataset scope", "Statistic": "Experiments", "Value": f"{int(df['exp_id'].nunique())}", "Unit/Note": "exp_id"},
-        {"Domain": "Grouped structure", "Statistic": "Median rows per study", "Value": f"{rows_per_study.median():.0f}", "Unit/Note": "rows"},
-        {"Domain": "Grouped structure", "Statistic": "Maximum rows per study", "Value": f"{int(rows_per_study.max())}", "Unit/Note": "rows"},
-        {"Domain": "Grouped structure", "Statistic": "Median rows per experiment", "Value": f"{rows_per_experiment.median():.0f}", "Unit/Note": "rows"},
-        {"Domain": "Grouped structure", "Statistic": "Maximum rows per experiment", "Value": f"{int(rows_per_experiment.max())}", "Unit/Note": "rows"},
-        {"Domain": "Target distribution", "Statistic": "Median qe", "Value": f"{df['qe'].median():.3f}", "Unit/Note": "mg g^-1"},
         {
-            "Domain": "Target distribution",
-            "Statistic": "IQR qe",
-            "Value": f"{df['qe'].quantile(0.25):.3f}-{df['qe'].quantile(0.75):.3f}",
+            "Section": "Corpus structure",
+            "Metric": "Observations / studies / experiments",
+            "Value": f"{total_rows} / {int(df['aut_id'].nunique())} / {int(df['exp_id'].nunique())}",
+            "Unit/Note": "rows / studies / experiments",
+        },
+        {
+            "Section": "Corpus structure",
+            "Metric": "Rows per study: median (IQR) / maximum",
+            "Value": f"{rows_per_study.median():.0f} ({rows_per_study.quantile(0.25):.0f}-{rows_per_study.quantile(0.75):.0f}) / {int(rows_per_study.max())}",
+            "Unit/Note": "rows",
+        },
+        {
+            "Section": "Corpus structure",
+            "Metric": "Top-3 studies share",
+            "Value": f"{rows_per_study.sort_values(ascending=False).head(3).sum() / total_rows * 100:.1f}",
+            "Unit/Note": "% of rows",
+        },
+        {
+            "Section": "Corpus structure",
+            "Metric": "Rows per experiment: median (IQR) / maximum",
+            "Value": f"{rows_per_experiment.median():.0f} ({rows_per_experiment.quantile(0.25):.0f}-{rows_per_experiment.quantile(0.75):.0f}) / {int(rows_per_experiment.max())}",
+            "Unit/Note": "rows",
+        },
+        {
+            "Section": "Adsorption-capacity distribution",
+            "Metric": "Cd(II) qe: median (IQR) / 95th percentile / maximum",
+            "Value": qe_summary(metal_frames["Cd(II)"]),
             "Unit/Note": "mg g^-1",
         },
-        {"Domain": "Target distribution", "Statistic": "95th percentile qe", "Value": f"{df['qe'].quantile(0.95):.3f}", "Unit/Note": "mg g^-1"},
-        {"Domain": "Target distribution", "Statistic": "Maximum qe", "Value": f"{df['qe'].max():.3f}", "Unit/Note": "mg g^-1"},
-        {"Domain": "Reporting completeness", "Statistic": "Missing pH", "Value": pct_missing("ph"), "Unit/Note": "of rows"},
-        {"Domain": "Reporting completeness", "Statistic": "Missing surface area", "Value": pct_missing("sa"), "Unit/Note": "of rows"},
-        {"Domain": "Reporting completeness", "Statistic": "Missing temperature", "Value": pct_missing("temp"), "Unit/Note": "of rows"},
-        {"Domain": "Reporting completeness", "Statistic": "Missing agitation speed", "Value": pct_missing("rpm"), "Unit/Note": "of rows"},
-        {"Domain": "Metal composition", "Statistic": "Cd(II)", "Value": count_pct("metal_cd"), "Unit/Note": "rows (%)"},
-        {"Domain": "Metal composition", "Statistic": "Cr(VI)", "Value": count_pct("metal_cr"), "Unit/Note": "rows (%)"},
-        {"Domain": "Metal composition", "Statistic": "Hg(II)", "Value": count_pct("metal_hg"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PE", "Value": count_pct("ret_pe"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PP", "Value": count_pct("ret_pp"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PS", "Value": count_pct("ret_ps"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PVC", "Value": count_pct("ret_pvc"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PET", "Value": count_pct("ret_pet"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PA", "Value": count_pct("ret_pa"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "PLA", "Value": count_pct("ret_pla"), "Unit/Note": "rows (%)"},
-        {"Domain": "Polymer composition", "Statistic": "Other", "Value": count_pct("ret_other"), "Unit/Note": "rows (%)"},
+        {
+            "Section": "Adsorption-capacity distribution",
+            "Metric": "Cr(VI) qe: median (IQR) / 95th percentile / maximum",
+            "Value": qe_summary(metal_frames["Cr(VI)"]),
+            "Unit/Note": "mg g^-1",
+        },
+        {
+            "Section": "Adsorption-capacity distribution",
+            "Metric": "Hg(II) qe: median (IQR) / 95th percentile / maximum",
+            "Value": qe_summary(metal_frames["Hg(II)"]),
+            "Unit/Note": "mg g^-1",
+        },
+        {
+            "Section": "Composition",
+            "Metric": "Cd(II) / Cr(VI) / Hg(II)",
+            "Value": f"{pct_only('metal_cd')} / {pct_only('metal_cr')} / {pct_only('metal_hg')}",
+            "Unit/Note": "% of rows",
+        },
+        {
+            "Section": "Composition",
+            "Metric": "PS / PE / PA / PET / PP / PVC / PLA / Other",
+            "Value": (
+                f"{pct_only('ret_ps')} / {pct_only('ret_pe')} / {pct_only('ret_pa')} / {pct_only('ret_pet')} / "
+                f"{pct_only('ret_pp')} / {pct_only('ret_pvc')} / {pct_only('ret_pla')} / {pct_only('ret_other')}"
+            ),
+            "Unit/Note": "% of rows",
+        },
+        {
+            "Section": "Composition",
+            "Metric": "Aged / virgin",
+            "Value": f"{pct_only('ags_aged')} / {pct_only('ags_virgin')}",
+            "Unit/Note": "% of rows",
+        },
+        {
+            "Section": "Coverage",
+            "Metric": "Metal x polymer x aging cells populated / total",
+            "Value": f"{populated_cells} / {coverage_cells_total}",
+            "Unit/Note": "cells",
+        },
+        {
+            "Section": "Coverage",
+            "Metric": "Absent cells",
+            "Value": f"{coverage_cells_total - populated_cells} / {coverage_cells_total}",
+            "Unit/Note": "cells",
+        },
+        {
+            "Section": "Coverage",
+            "Metric": "Populated cells still very sparse or thin",
+            "Value": f"{sparse_or_thin_cells} / {populated_cells}",
+            "Unit/Note": "cells",
+        },
+        {
+            "Section": "Reporting completeness",
+            "Metric": "Missing pH / sa / temp / rpm",
+            "Value": f"{pct_missing_value('ph')} / {pct_missing_value('sa')} / {pct_missing_value('temp')} / {pct_missing_value('rpm')}",
+            "Unit/Note": "% of rows",
+        },
     ]
     return pd.DataFrame(records)
 

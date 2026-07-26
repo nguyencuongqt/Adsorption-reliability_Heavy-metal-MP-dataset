@@ -1,0 +1,12 @@
+{
+  "dataset_sha256": "47aca586e611d205f845392dbced6685f713bc9dd36bb3e26b6d098b419ed2ed",
+  "outer_splits": "Identical to the original RQ1 analysis",
+  "inner_cv": {
+    "random_cv": "5-fold shuffled KFold within outer-training rows",
+    "group_exp": "5-fold GroupKFold by experiment within outer-training data",
+    "group_aut": "5-fold GroupKFold by study within outer-training data"
+  },
+  "selection_metric": "RMSE on the original qe scale",
+  "n_outer_results": 75,
+  "target_transform": "Training-fold 0.995 quantile clipping, log1p fit, inverse transform, prediction clipping"
+}

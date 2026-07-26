@@ -13,6 +13,5 @@ Write-Host "Environment ready."
 Write-Host "Activate later with:"
 Write-Host "  .\.venv\Scripts\Activate.ps1"
 Write-Host ""
-Write-Host "Run the study with:"
-Write-Host "  python scripts/03_run_full_study.py"
-
+Write-Host "Run the reproducible nested-tuning sensitivity analysis with:"
+Write-Host "  python scripts/13_run_nested_tuning.py"

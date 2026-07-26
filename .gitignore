@@ -17,3 +17,34 @@ env/
 
 # Local outputs and previews
 tmp/
+tmp_*
+
+# Submission working files kept outside the public repository
+manuscript_package/
+docs/
+pdf_references/
+pdf_literature studies/
+data/legacy_reference/
+*.docx
+*.tiff
+*.tif
+~$*
+
+# Local artwork and duplicate exports
+Fig 1_Framework.svg
+GA.svg
+GA.svg.*
+
+# Internal literature and availability audits
+results/external_validation/
+results/literature_audit/
+results/descriptive_audit/
+
+# Large or duplicate result exports
+results/**/*.pdf
+results/**/*.tiff
+results/**/*.tif
+
+# Local manuscript assembly helpers
+scripts/10_build_manuscript_package.py
+scripts/11_build_manuscript_docx.py
