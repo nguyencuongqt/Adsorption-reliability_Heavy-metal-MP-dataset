@@ -1,8 +1,8 @@
 # Reliability of Heavy-Metal Adsorption Models for Microplastics
 
-This repository contains the analysis dataset, source code, configuration,
-machine-readable results, and selected figures supporting a study of predictive
-and interpretive reliability in literature-derived adsorption data.
+This repository contains the analysis dataset, source code, configuration, and
+machine-readable results supporting a study of predictive and interpretive
+reliability in literature-derived adsorption data.
 
 The dataset contains 1,009 observations from 149 experiments nested within
 23 studies.
@@ -43,7 +43,6 @@ Feature importance is method-sensitive and model-sensitive. Importance can indic
 - `scripts/`: command-line runners
 - `results/tables/`: primary machine-readable results
 - `results/nested_tuning/`: nested-tuning sensitivity results
-- `results/figures/`: selected figures in PNG format
 
 ## Environment setup
 
@@ -107,5 +106,8 @@ analysis.
 
 ## Scope
 
-Submission documents, working notes, copyrighted literature files, temporary
-renders, and duplicate high-resolution exports are intentionally excluded.
+Submission documents, final figures, working notes, copyrighted literature
+files, temporary renders, and duplicate high-resolution exports are
+intentionally excluded. Final figures were refined separately from the
+code-generated diagnostic plots and are not presented as reproducible outputs
+of this repository.

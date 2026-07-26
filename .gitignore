@@ -41,6 +41,7 @@ results/literature_audit/
 results/descriptive_audit/
 
 # Large or duplicate result exports
+results/figures/
 results/**/*.pdf
 results/**/*.tiff
 results/**/*.tif
