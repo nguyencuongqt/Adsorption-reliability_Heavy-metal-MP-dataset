@@ -39,6 +39,11 @@ GA.svg.*
 results/external_validation/
 results/literature_audit/
 results/descriptive_audit/
+results/external_validation_2026/
+
+# Local, non-distributable external-validation material and its standalone release checkout
+external data 2026/
+release_repository/
 
 # Large or duplicate result exports
 results/figures/

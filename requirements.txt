@@ -6,3 +6,5 @@ shap
 lightgbm
 scipy
 Pillow
+joblib
+openpyxl

@@ -41,6 +41,9 @@ Feature importance is method-sensitive and model-sensitive. Importance can indic
 - `configs/study_config.json`: analysis configuration
 - `src/adsorption_reliability_study/`: analysis modules
 - `scripts/`: command-line runners
+- `scripts/18_build_external_model_input.mjs`: audited adapter from the manually extracted external workbook to the locked 25-feature contract
+- `scripts/19_run_external_validation_release.py`: exact-specification external transportability runner
+- `scripts/20_insert_external_validation_manuscript.py`: local manuscript-assembly helper
 - `results/tables/`: primary machine-readable results
 - `results/nested_tuning/`: nested-tuning sensitivity results
 
@@ -70,6 +73,41 @@ python scripts/13_run_nested_tuning.py
 It retains the locked dataset and outer validation splits, while selecting
 hyperparameters only within each outer-training set. Outputs are written to
 `results/nested_tuning/`.
+
+## Exploratory external transportability check
+
+The independent 2026 data were used only after the 1,009-observation corpus
+was locked. They are not included in model fitting, preprocessing decisions,
+or model selection. This analysis is therefore an exploratory external
+transportability check, rather than a confirmatory external validation: it
+contains two Cd(II) source studies (35 digitized equilibrium observations),
+with incomplete pH and surface-area reporting.
+
+The reportable run uses the frozen release specification, not the generic
+fallback runner:
+
+```powershell
+python scripts/19_run_external_validation_release.py `
+  --release-root .\release_repository `
+  --external ".\external data 2026\extracted_external_holdout\external_holdout_2026_model_ready.xlsx" `
+  --sheet Model_Input_25Features `
+  --outdir .\results\external_validation_2026
+```
+
+`release_repository/` is a separately versioned local checkout containing the
+frozen 25-variable release, its dataset, and its configuration; it is not
+tracked by this repository. The external PDFs, digitized workbook, and derived
+validation outputs are also deliberately excluded from Git because they are
+locally curated source material. Before running the command, build or audit
+the model-ready workbook with `scripts/18_build_external_model_input.mjs`:
+
+```powershell
+node scripts/18_build_external_model_input.mjs INPUT_CORE.xlsx OUTPUT_MODEL_READY.xlsx [PREVIEW.png]
+```
+
+That adapter requires the local `@oai/artifact-tool` runtime. The generic
+fallback scorer is retained only in `scripts/legacy/` and must not be used to
+report results for the locked study model.
 
 ## Archived primary analysis
 
